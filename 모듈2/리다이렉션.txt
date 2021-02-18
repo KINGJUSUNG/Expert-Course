@@ -1,0 +1,4 @@
+./a.out 2>error.log
+
+./a.out의 오류결과는 2(stderr)로 출력됨
+그러나 '>'로 리다이렉션을 했기때문에 errro.log로 출력됨

@@ -1,0 +1,12 @@
+net start tomcat8
+net stop tomcat8
+localhost:8080 으로 들어가서 Manager App 클릭
+
+프로젝트 마우스 오른쪽 클릭 -> export -> war파일로 -> 바탕화면에 ROOT라는 이름으로 저장
+// 루트의 경로를 얻어낼 수 있음
+// 실제 서버상에서 작동하려면 이 경로로 적용시켜야함
+// 평소에 개발할 때는 아래 path로 테스트하는것이 좋음
+// String rp = request.getServletContext().getRealPath("/");
+// String path = rp + "/WebContent/images";
+		
+String path = "C:/WorkSpace2/MyProject/WebContent/images";

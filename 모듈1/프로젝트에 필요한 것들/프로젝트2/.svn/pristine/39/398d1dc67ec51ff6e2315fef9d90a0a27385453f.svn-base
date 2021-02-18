@@ -1,0 +1,39 @@
+package com.surveypro.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.naming.NamingException;
+
+import com.surveypro.controller.DbManager;
+import com.surveypro.vo.PointHistoryVO;
+
+public class PointHistoryDAO {
+
+	public static final String KEY = "PointHistoryDAO";
+
+	public boolean insertFivePoints(PointHistoryVO phv) {
+
+		String sql = "INSERT INTO pointhistory VALUES(DEFAULT,?,?,5);";
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		boolean result = false;
+
+		try {
+			con = DbManager.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, phv.getEmail());
+			pstmt.setInt(2, phv.getS_code());
+			result = (pstmt.executeUpdate() > 0);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (NamingException e) {
+			e.printStackTrace();
+		} finally {
+			DbManager.close(pstmt);
+			DbManager.close(con);
+		}
+		return result;
+	}
+}

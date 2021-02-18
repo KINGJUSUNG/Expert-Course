@@ -1,0 +1,33 @@
+package com.surveypro.member.service;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.surveypro.dao.MemberDAO;
+
+public class MemberEmailCheckService implements IMemberService {
+
+	private MemberDAO dao;
+
+	public MemberEmailCheckService() {
+		dao = new MemberDAO();
+	}
+
+	@Override
+	public void doService(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		String email = (String) request.getParameter("email");
+
+		if (email == null || email.trim().equals("")) {
+			throw new Exception("email field is empty.");
+		}
+
+		if (dao.checkEmail(email)) {
+			request.setAttribute("email", email);
+		} else {
+			throw new Exception("사용중인 이메일 주소입니다.");
+		}
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package kr.co.dinner41.dao;
+
+public class OrderDaoImplTest {
+
+}

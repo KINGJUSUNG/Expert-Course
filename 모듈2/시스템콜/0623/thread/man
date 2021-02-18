@@ -1,0 +1,5 @@
+pthread_create();
+pthread_join();
+
+fork();
+wait();

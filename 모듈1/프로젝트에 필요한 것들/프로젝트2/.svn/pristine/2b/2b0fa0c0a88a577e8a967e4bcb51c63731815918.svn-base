@@ -1,0 +1,27 @@
+package com.surveypro.survey.service;
+
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.surveypro.dao.SurveyInfoDAO;
+import com.surveypro.vo.SurveyInfoVO;
+
+public class SurveyGetSurveyInfoService implements ISurveyService {
+	
+	private SurveyInfoDAO dao;
+	
+	public SurveyGetSurveyInfoService() {
+		dao = new SurveyInfoDAO();
+	}
+	
+	@Override
+	public void doService(HttpServletRequest request, HttpServletResponse response) 
+			throws Exception {
+		
+		ArrayList<SurveyInfoVO> list = null;
+		list = dao.getSurveyInfoList();
+		request.setAttribute("list", list);
+	}
+}

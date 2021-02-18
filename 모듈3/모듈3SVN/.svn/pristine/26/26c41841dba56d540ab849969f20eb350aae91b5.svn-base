@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" href="../../css/dinner41.css">
+
+    <title>home</title>
+</head>
+<body>
+
+<nav class="navbar navbar-light light_green" style="background-color: aquamarine">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div>
+        <h5 class="up_down_center">STORE MANAGE</h5>
+    </div>
+
+    <img src="../../icons/home-solid.svg" width="30pt" style="">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">내정보 보기</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">주문내역</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">1:1 문의</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">로그아웃</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top: 15pt">
+    <div class="text-center">
+        <img src="../../images/1인의만찬.png" width="18%" class="img-fluid" alt="no title" style="margin: auto;"/>
+        <h2>메뉴 상세</h2>
+    </div>
+</div>
+<hr/>
+
+<div class="container-fluid">
+    <div class="container-fluid">
+        <form style="text-align: left;">
+            <div class="card card-body">
+                <img src="../../images/table-cafe.jpg" width="100%" class="rounded">
+            </div>
+            <br/>
+
+            <div class="form-group">
+                <label for="menuName">메뉴명</label>
+                <div class="card card-body" id="menuName">
+                    메뉴명을 여기에 입력하시오
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="menuAmount">재고 수량</label>
+                <div class="card card-body" id="menuAmount">
+                    메뉴명 수량을 여기에 입력하시오
+                </div>
+            </div>
+
+            <div class="form-group"  style="margin-bottom: 20pt">
+                <label for="inputKind">제공방식</label>
+                <div class="card card-body" id="inputKind">
+                    제공방식을 여기에 입력하시오
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="menuMoney">메뉴 가격</label>
+                <div class="card card-body" id="menuMoney">
+                    가격을 여기에 입력하시오
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="tag">메뉴 태그</label>
+                <div id="tag">
+                    <span class="badge badge-primary">밥</span>
+                    <span class="badge badge-primary">국수</span>
+                    <span class="badge badge-primary">한식</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="menuDes">메뉴 설명</label>
+                <div class="card card-body" id="menuDes">
+                    여기에 메뉴설명을 입력하시오
+                </div>
+            </div>
+
+
+            <div class="form-group" style="margin-bottom: 40pt">
+                <label for="inputContent">메뉴 유의 사항</label>
+                <div class="card card-body" id="inputContent">
+                    여기에 메뉴설명을 입력하시오
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-success two_button">메뉴 수정 하기</button>
+            <button type="button" class="btn btn-success two_button float-right">뒤로가기</button>
+        </form>
+    </div>
+</div>
+<hr/>
+<div class="last_block"></div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+package kr.co.dinner41.mapper;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import kr.co.dinner41.vo.OrderViewVO;
+
+public class OrderViewMapper implements RowMapper<OrderViewVO>{
+
+}

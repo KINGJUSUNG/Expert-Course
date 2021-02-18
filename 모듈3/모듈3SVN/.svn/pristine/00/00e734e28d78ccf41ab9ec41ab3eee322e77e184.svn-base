@@ -1,0 +1,22 @@
+# pack-refs with: peeled
+be78e87ef309fae5a2f20de92a0fac8252d842b1 refs/remotes/origin/ISSUE-14
+7b21b74093b112c4b5d2f5d1d759d13f37ef680e refs/remotes/origin/ISSUE-14-2
+7ff311e58b8accdc1f4fdc1f5e4329f146b160a6 refs/remotes/origin/ISSUE-15
+10a37fc65e3ff086a7f7eeeba7d3a83664bb52d3 refs/remotes/origin/ISSUE-16
+fc2389e916849ec996351317549e92211d293669 refs/remotes/origin/ISSUE-17
+e454df155dd6bdef495f7520e59cd1d53d5e0c84 refs/remotes/origin/ISSUE-19
+79ea9ec954913e9168196813bccbd804c8e95290 refs/remotes/origin/ISSUE-2
+d3238ea2dea5d2dcf27ce1b946dd5ef3b32dec49 refs/remotes/origin/ISSUE-20
+0c71780983a934f1d04592a235edc18b2e46f0f9 refs/remotes/origin/ISSUE-21
+f11a461ab513e2772e45f2647edb50c9a252d130 refs/remotes/origin/basic
+23c6001d6c2ac1c3d9852f784de8c38f2637f9c8 refs/remotes/origin/commitTest
+fd7cfa9b17f152fc1d58edb2efd8985eceec82b0 refs/remotes/origin/develop
+8b36f04b7ae5ce4a58e44bb3296d6c189a31d14b refs/remotes/origin/feature
+bdf6035dee875e1b45ee6816cce59a036ec286b2 refs/remotes/origin/feature1
+c73c63a82695960043d4585eaa26d2e641f619df refs/remotes/origin/gg
+8573bb40e25309460d4035486b3d160554958251 refs/remotes/origin/gyetol
+5cc9feddc24eb37ac39bde69d0b513f8420112e2 refs/remotes/origin/hyowon
+fd6c9e107e0c54907eed8e445a383513fd71ceb9 refs/remotes/origin/jusung
+8377fc9b18deb12f4307c31cce54adfd3f3bd306 refs/remotes/origin/master
+5029a37ce79ca690e681092781ef6dfb5e6046fe refs/remotes/origin/paging-Service
+8a3b3725dcec0a6bbce38ddcb490affcfb397cf7 refs/remotes/origin/review_reset

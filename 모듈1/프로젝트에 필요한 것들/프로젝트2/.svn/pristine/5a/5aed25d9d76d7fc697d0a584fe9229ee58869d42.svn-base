@@ -1,0 +1,19 @@
+$.fn.bindAppBtnClick = function(){
+	$(this).click(function(){
+		$(this).siblings("button#return").css("display","none");
+		$(this).css("display","none");
+		// Y라고 출력  + db변경
+	})
+}
+$.fn.bindReBtnClick = function(){
+	$('.rewrap>.reMid>.reCont>ul>li>#return').click(function(){
+		
+		// 이 행이 사라지게 해주세여.
+	})
+}
+
+
+$(document).ready(function(){
+	$('.rewrap>.reMid>.reCont>ul>li>#approve').bindAppBtnClick();
+	$('.rewrap>.reMid>.reCont>ul>li>#return').bindReBtnClick();
+})

@@ -1,0 +1,71 @@
+package com.surveypro.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import javax.naming.NamingException;
+
+import com.surveypro.controller.DbManager;
+import com.surveypro.vo.SurveyInfoVO;
+
+public class SurveyInfoDAO {
+	
+	public SurveyInfoDAO() {}
+	
+	public ArrayList<SurveyInfoVO> getSurveyInfoList() {
+		
+		ArrayList<SurveyInfoVO> list = new ArrayList<>();
+		
+		String sql = "SELECT \r\n" + 
+				"	C.nick writer, \r\n" + 
+				"	A.s_title s_title, \r\n" + 
+				"	COUNT(*) AS interest_count, \r\n" + 
+				"	CAST(A.writtendate AS DATE) written_date, \r\n" + 
+				"	CAST(date_add(A.writtendate, INTERVAL D.g_deadline DAY) AS DATE) end_date\r\n" + 
+				"FROM \r\n" + 
+				"	survey A, interests B, members C, grades D\r\n" + 
+				"WHERE \r\n" + 
+				"	A.s_code = B.s_code AND\r\n" + 
+				"	A.email = C.email AND\r\n" + 
+				"	C.g_name = D.g_name\r\n" + 
+				"GROUP BY \r\n" + 
+				"	A.s_code\r\n" + 
+				"LIMIT\r\n" + 
+				"	10;";
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			con = DbManager.getConnection();
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				SurveyInfoVO s = new SurveyInfoVO();
+				s.setWriter(rs.getString("writer"));
+				s.setS_title(rs.getString("s_title"));
+				s.setInterest_count(rs.getInt("interest_count"));
+				s.setWritten_date(rs.getString("written_date"));
+				s.setEnd_date(rs.getString("end_date"));
+				list.add(s);
+			}
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		catch (NamingException e) {
+			e.printStackTrace();
+		} 
+		finally {
+			DbManager.close(rs);
+			DbManager.close(pstmt);
+			DbManager.close(con);
+		}
+		
+		return list;
+	}
+}

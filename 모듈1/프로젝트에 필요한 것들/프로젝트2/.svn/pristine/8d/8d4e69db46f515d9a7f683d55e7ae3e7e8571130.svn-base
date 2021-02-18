@@ -1,0 +1,22 @@
+$(document).ready(function() {
+	$('#logOut').click(function() {
+		$.ajax({
+			url: '../Logout.do',
+			type: 'post',
+			success: function(data) {
+				// 로그아웃 성공
+				if (data.errno == 0) {
+					alert(data.message);
+					location.reload();
+				}
+				// 로그아웃 실패
+				else {
+					alert(data.message);
+				}
+			}
+		});
+	});
+	$('.myPage #changePass').click(function(){
+		$('.mid>#side>#changePass').css("display","block");
+	})
+});

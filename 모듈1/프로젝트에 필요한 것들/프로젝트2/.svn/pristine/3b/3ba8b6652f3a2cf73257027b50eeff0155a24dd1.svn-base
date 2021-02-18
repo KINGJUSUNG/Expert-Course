@@ -1,0 +1,13 @@
+package com.surveypro.dao;
+
+public class test {
+
+	public static void main(String[] args) {
+
+		SurveyDAO sdao = new SurveyDAO();
+
+		System.out.println(sdao.getLastS_id("admin@surveypro.com"));
+
+	}
+
+}

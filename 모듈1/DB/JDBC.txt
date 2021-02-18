@@ -1,0 +1,4 @@
+jdbc드라이버를
+java/jdk폴더/jre/lib/ext
+java/jdk폴더/jre/lib
+에 넣어서 등록해야한다.

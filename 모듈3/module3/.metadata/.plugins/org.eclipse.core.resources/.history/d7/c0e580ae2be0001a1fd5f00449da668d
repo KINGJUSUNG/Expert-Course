@@ -1,0 +1,7 @@
+package kr.co.dinner41.service.order;
+
+import java.util.List;
+
+public interface OrderListService {
+	public List<OrderViewVO> execute(int userId);
+}

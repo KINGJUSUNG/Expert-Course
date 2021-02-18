@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<div class="resultTop">
+	<ul>
+		
+	</ul>
+</div>
+<div class="resultMid">
+	<ul data-qType="C">
+		<li></li>
+		<li>1km 이내 :
+			<div id="graph"></div> <div id="number">(10)</div>
+		</li>
+		<li>5km 이내 :
+			<div id="graph"></div> <div id="number">(6)</div>
+		</li>
+		<li>10km 이내 :
+			<div id="graph"></div> <div id="number">(3)</div>
+		</li>
+		<li>15km 이내 :
+			<div id="graph"></div> <div id="number">(1)</div>
+		</li>
+		<li>15km 이상 :
+			<div id="graph"></div> <div id="number">(2)</div>
+		</li>
+	</ul>
+	<ul data-qType="S">
+		<li>문제] 당신이 다니는 대학교 및 전공은?</li>
+	</ul>
+	<ul data-qType="C">
+		<li>문제] 사용하는 휴대폰의 회사는? </li>
+		<li>애플 :
+			<div id="graph"></div> <div id="number">(10)</div>
+		</li>
+		<li>삼성 :
+			<div id="graph"></div> <div id="number">(6)</div>
+		</li>
+		<li>LG :
+			<div id="graph"></div> <div id="number">(3)</div>
+		</li>
+		<li>기타 :
+			<div id="graph"></div> <div id="number">(1)</div>
+		</li>
+	</ul>
+</div>
+<div class="resultBottom">
+	<button type="button" id="historyBack" onclick="history.back(-1)">돌아가기</button>
+</div>

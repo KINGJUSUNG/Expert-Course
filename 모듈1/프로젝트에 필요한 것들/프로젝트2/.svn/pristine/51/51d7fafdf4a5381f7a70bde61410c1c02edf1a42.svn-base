@@ -1,0 +1,21 @@
+$.fn.bindReportClick = function(){
+	this.click(function(){
+		if($('.sTop > ul > li:nth-child(4)').css("display")=="none"){
+			$('.sTop > ul > li:nth-child(4)').css("display","block");
+		}
+		else{
+			$('.sTop > ul > li:nth-child(4)').css("display","none");
+		}
+	})
+};
+$.fn.bindSubmitReport = function(){
+	this.click(function(){
+		alert("신고 접수가 완료 되었습니다.");
+	})
+}
+
+
+$(document).ready(function(){
+	$('.surwrap > .sTop > ul > li > button#btnReport').bindReportClick();
+	$('.sTop > ul > li:nth-child(4) > #btnSubmitReport').bindSubmitReport();
+});

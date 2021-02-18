@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.ctwrap{ margin:40px 50px 0px 50px; padding:0px 0px 100px 0px; width:800px; font-size:13pt; }
+.ctwrap  ul > li {list-style: none; }
+
+.ctwrap > .categories{ border:0; border-top:1px solid black; border-bottom:1px solid black; height:35px; margin:0px 0px 60px 0px;}
+.ctwrap > .categories > ul {margin:5px 0px 5px 0px;}
+.ctwrap > .categories  ul> li{float:left; margin:0px 5px 0px 0px;}
+.ctwrap > .categories  ul> li button{background-color:white; border:0; font-size:11pt;}
+.ctwrap > .categories  ul> li button:hover{text-shadow:2px 2px 6px red;}
+
+
+.ctwrap > .categorySurvey>.cateTitle {border:0;border-bottom:1px solid black;border-top:1px solid black; width:700px; margin:0px 150px 0px 50px; height:20px; padding:10px 0px 10px 0px;}
+.ctwrap > .categorySurvey>.cateTitle > ul{margin:0; padding:0;}
+.ctwrap > .categorySurvey>.cateTitle > ul>li { float:left;}
+.ctwrap > .categorySurvey>.cateTitle > ul>li:first-child{width: 100px; margin:0px 0px 0px 50px;}
+.ctwrap > .categorySurvey>.cateTitle > ul>li:nth-child(2){width: 200px; margin:0px 0px 0px 10px;}
+.ctwrap > .categorySurvey>.cateTitle > ul>li:nth-child(3){width: 50px; margin:0px 0px 0px 10px;}
+.ctwrap > .categorySurvey>.cateTitle > ul>li:nth-child(4){width: 200px; margin:0px 0px 0px 50px;}
+
+.ctwrap > .categorySurvey>.cateCont{width: 50px; margin:0px 0px 0px 10px;}
+.ctwrap > .categorySurvey>.cateCont {border:0; border-bottom:1px dashed black; width:700px; margin:0px 150px 0px 50px; height:20px; padding:10px 0px 10px 0px;}
+.ctwrap > .categorySurvey>.cateCont > ul{margin:0; padding:0; height:20px}
+.ctwrap > .categorySurvey>.cateCont > ul>li { float:left;}
+.ctwrap > .categorySurvey>.cateCont > ul>li:first-child{width: 100px; margin:0px 0px 0px 50px;}
+.ctwrap > .categorySurvey>.cateCont > ul>li:nth-child(2){width: 200px; margin:0px 0px 0px 10px;}
+.ctwrap > .categorySurvey>.cateCont > ul>li:nth-child(3){width: 50px; margin:0px 0px 0px 10px;}
+.ctwrap > .categorySurvey>.cateCont > ul>li:nth-child(4){width: 200px; margin:0px 0px 0px 50px;}
+
+
+.ctwrap>.categorySurvey>.cateBottom{border-top:4px double black; width:700px; margin:0px 50px 0px 50px;}
+.ctwrap>.categorySurvey>.cateBottom ul{padding:0; margin:5px; margin:10px 0px 0px 300px; }
+.ctwrap>.categorySurvey>.cateBottom ul>li{float:left; margin:0px 5px 0px 0px; }
+.ctwrap>.categorySurvey>.cateBottom ul>li>a { color:black; text-decoration: none;}
+.ctwrap>.categorySurvey>.cateBottom ul>li>a:hover { text-shadow:2px 2px 1px black; margin:0px 5px 0px 0px; }
+
+

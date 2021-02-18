@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="lectopiaTest" class="com.spring.entity.LectopiaTest">
+		<property name="kor" value="90"></property>
+		<property name="eng" value="100"></property>
+		<property name="math" value="90"></property>
+	</bean>
+	<bean id="printer" class="com.spring.ui.DefaultTestPrinter">
+		<constructor-arg ref="lectopiaTest"/>
+	</bean>
+
+	<bean id="printer2" class="com.spring.ui.GridTestPrinter">
+		<property name="test" ref="lectopiaTest"/>
+	</bean>
+</beans>

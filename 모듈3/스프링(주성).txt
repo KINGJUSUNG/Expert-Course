@@ -1,0 +1,123 @@
+프레임워크 : 작업툴. 따라서 틀에 맞춰서 지정된 작업만 수행하면 됨.
+
+리플렉션 : 객체를 통해 클래스의 구조(정보)를 파악하는 기법
+왜 굳이 리플렉션을 써서 복잡하게 클래스의 정보를 얻어내야함?
+> 메서드의 동적 호출을 가능하게 하기 위해서
+동적 호출 : 실행타임에 동적으로 객체의 메서드를 호출하는 것
+
+프록시 : 특정 객체를 대신하는 객체
+프록시를 쓰는 이유?
+> 특정 객체의 모든 메서드에 전처리 혹은 후처리 작업을 추가하고 싶을 경우 일괄적으로 할 수 있도록 하기 위해
+프록시 객체는 원본객체를 완전히 대체할 수는 없다. 원본객체는 인터페이스를 구현하여 오버라이딩한 메서드 외에도 
+자신만의 메서드를 가지고 있을 것이다. 그러나 프록시 객체는 인터페이스에 있는 메서드에만 전, 후처리 작업을 적용시킬 수 
+있고, 심지어 그 메서드만 호출할 수 있다는 한계점이 있다.
+
+Servlet, jsp api를 쉽게 import 하기 위해서는? 두가지 방법이 있음
+1. 톰캣을 활용
+(프로젝트 우클릭 > 프로퍼티 > 프로젝트 패싯츠 에서 톰캣을 추가하면 자동으로 해당 api도 import됨)
+
+2. maven을 활용
+(우선 pom.xml의 package태그의 jar를 war로 바꿈.
+pom.xml에서 dependencies태그를 직접 만들고 안에 필요한 라이브러리의 dependency태그를 붙여넣으면 됨)
+
+메이븐 프로젝트를 생성하면 반드시 메이븐 컴파일러 정보를 직접 삽입해주어야함
+자바 프로젝트를 메이븐 프로젝트로 바꾸면 자동으로 삽입됨
+
+자바 프로젝트를 메이븐 프로젝트로 변환하는 법
+프로젝트 우클릭 > configure > convert to maven project
+
+pom.xml에 라이브러리 추가하는 법
+pom.xml에서 dependencies태그를 직접 만들고 안에 필요한 라이브러리의 dependency태그를 붙여넣으면 됌
+
+자바에서 객체관의 관계(Association)
+Is-A 관계(상속) : 일반화, 특수화
+Use-A 관계		일반연관관계
+Has_A 관계(복합객체)	특수연관관계 (집단화, 합성화)
+특수연관관계 : 객체가 객체를 포함(객체가 멤버로서 객체를 가짐)하는 구조
+집단화(Aggregation) : 전체객체와 부품객체가 생성되는 시점이 다른 경우
+합성화(Composition) : 전체객체와 부품객체가 함께 생성되는 경우
+
+프로젝트에서 폴더를 생성할 경우 클래스 패스에 등록하지 않으면 폴더안의 파일을 참조할 수 없음
+프로젝트 우클릭 > 프로퍼티 > 자바 빌드 패스 > 소스 > add 폴더에서 클래스 패스로 등록
+
+객체 저장소 : 스프링 컨테이너(IOC Container)
+컨텍스트 : 컨테이너에 담기는 내용들
+
+Spring Bean Configuration 파일에 등록만 한다고 컨텍스트가 만들어지는 것은 아님
+ApplicationContext ctx = new ClassPathXmlApplicationContext("com/example/config/AppContext.xml");
+이런 식으로 참조하는 시점에 실제 컨텍스트가 만들어짐
+이런 류의 메서드들의 인자에 들어가는 경로는 언제나 클래스 패스를 기준으로 입력하면 됨
+즉 클래스패스까지는 생략하고 그 다음부터 경로를 넣어주면 됨
+
+ApplicationContext ctx = new ClassPathXmlApplicationContext("beantest/AppContext.xml");
+Person p1 = ctx.getBean("person", Person.class);
+Person p2 = ctx.getBean("person", Person.class);
+p1, p2는 같은 객체를 가리키게됨. 그러나 bean객체 생성시 scope속성을 prototype으로 주게되면 getBean()을 할때마다
+다른 객체가 생성되서 반환됨
+
+bean객체는 언제 만들어지고 언제 소멸됨?
+컨텍스트가 생성될 때 생성되고
+컨텍스트가 종료될 때 소멸됨
+그러나 scope="prototype"은 소멸을 확인할 수 없음
+
+@Autowired 같은 경우 setter를 없애도 객체를 주입할 수 있음
+왜냐하면 reflection을 사용하기 때문
+
+컴포넌트 : 어떠한 작업들을 모아놓은 집합체
+어노테이션만봐도 이 클래스가 무슨 역할을 하는 지 알 수도 있음
+
+어노테이션으로 필드값을 주입할 때 
+값이 프리미티브 타입이면 : @Value
+값이 레퍼런스 타입이면 : @Autowired
+
+xml에서 util을 쓸때 타입이 항상 대표타입으로 리턴된다는 점 기억해라
+
+스프링 프레임워크에서 단하나의 행을 꺼내는 방법은 없음
+
+RuntimeException은 의무적으로 예외처리를 하지 않아도 되는 익셉션
+
+
+
+springmvc 
+
+pom.xml설정
+프로퍼티에 자바버전 1개랑 스프링프레임워크 1개 버전 바꾸고
+메이븐 플러그인 3.8.1로 바꾸고 자바버전 소스, 타켓 바꾸기
+톰캣등록이 안되어있을 경우 프리퍼런스에 서버에 런타임 인바이러먼트에서 적용
+
+웹 어플리케이션 구동 순서
+was구동 > ApplicationContext 생성 및 초기화(root-context.xml을 사용하여 초기화) > 요청대기
+최초 요청 > Dispatcher서블릿 생성 및 초기화(servlet-context.xml을 사용하여 초기화)
+이 후 요청부터는 이미 초기화된 Dispatcher서블릿을 이용함 
+
+스프링 빈을 등록할 수 있는 파일은 2개 있음
+root-context.xml : 웹 어플리케이션이 구동될 때 생성되는 어플리케이션 컨텍스트에 등록할 빈들이 설정되어있는 지시서
+servlet-context.xml : DispatcherServlet 객체가 생성될 때 등록할 빈들이 설정되어있는 지시서
+
+requestHandler : 요청이 들어왔을 때 실제로 처리하는 놈
+ViewResolver는 jsp파일을 선택하게 해줌
+
+사용자의 요청이 들어오면 Dispatcher서블릿은 url을 판단하여 컨트롤러를 선택함
+컨트롤러는 특정값을 반환함. 그 반환하는 값을 가지고 ViewResolver가 jsp파일을 선택함
+
+<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+<!-- resources관련 요청이 들어오면 Dispatcher가 아니라 이것이 작동함 -->
+<resources mapping="/resources/**" location="/resources/" />
+
+<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<!-- 컨트롤러가 반환하는 값의 앞 뒤에 붙여서 jsp파일명을 구성하여 해당 jsp파일을 선택해줌 -->
+	<beans:property name="prefix" value="/WEB-INF/views/" />
+	<beans:property name="suffix" value=".jsp" />
+</beans:bean>
+
+개발자가 해야할 일
+1. 핸들러를 가지는 컨트롤러를 만들어서 스프링 빈에 등록
+2. jsp파일 생성
+
+
+form태그에서 데이터를 보낼때 action에 경로 쓸때 현재 form이 어떤 폴더에 있는지 유의해라 (헷갈리기 쉬움)
+
+form.xml의 artifactId가 ContextName
+
+jQuery사용할때 resources폴더 밑에 두고 사용해라

@@ -1,0 +1,13 @@
+package kr.co.dinner41.service.order;
+
+import org.springframework.stereotype.Service;
+
+@Service("orderReceiptComplete")
+public class OrderReceiptCompleteServiceImpl implements OrderReceiptCompleteService {
+
+	@Override
+	public void execute(int orderId) {
+
+	}
+
+}

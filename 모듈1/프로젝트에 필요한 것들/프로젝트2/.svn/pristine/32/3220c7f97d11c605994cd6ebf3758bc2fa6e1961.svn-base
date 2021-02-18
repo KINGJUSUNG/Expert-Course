@@ -1,0 +1,48 @@
+package com.surveypro.member.service;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.surveypro.dao.MemberDAO;
+import com.surveypro.vo.MemberVO;
+
+public class MemberInsertService implements IMemberService {
+
+	private MemberDAO dao;
+
+	public MemberInsertService() {
+		dao = new MemberDAO();
+	}
+
+	@Override
+	public void doService(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		String email = (String) request.getParameter("email");
+		String nick = (String) request.getParameter("nick");
+		String pass1 = (String) request.getParameter("pass1");
+		String pass2 = (String) request.getParameter("pass2");
+
+		if (email == null || email.trim().equals("")) {
+			throw new Exception("email field is empty.");
+		}
+		if (nick == null || nick.trim().equals("")) {
+			throw new Exception("nickname field is empty");
+		}
+		if (pass1 == null || !pass1.equals(pass2)) {
+			throw new Exception("password and password check field is different");
+		}
+
+		MemberVO member = new MemberVO();
+		member.setEmail(email);
+		member.setNick(nick);
+		member.setPass(pass1);
+
+		if (dao.insert(member)) {
+			request.setAttribute("member", member);
+		} else {
+			throw new Exception("Member Insert Failed.");
+		}
+
+	}
+
+}

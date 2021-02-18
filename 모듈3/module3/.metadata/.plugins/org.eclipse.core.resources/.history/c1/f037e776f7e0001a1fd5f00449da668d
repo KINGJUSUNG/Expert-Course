@@ -1,0 +1,11 @@
+package kr.co.dinner41.vo;
+
+public class Menu2OrderViewVO {
+	
+	private int orderId;
+	private String storeName;
+	private String menuName;
+	private int amount;
+	
+	
+}

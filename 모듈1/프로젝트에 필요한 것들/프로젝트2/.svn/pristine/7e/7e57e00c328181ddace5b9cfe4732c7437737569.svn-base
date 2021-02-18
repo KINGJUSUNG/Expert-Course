@@ -1,0 +1,48 @@
+package com.surveypro.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.naming.NamingException;
+
+import com.surveypro.controller.DbManager;
+import com.surveypro.vo.ChoiceVO;
+
+public class ChoiceDAO {
+
+	public static final String KEY = "ChoiceDAO";
+
+	public boolean insert(ChoiceVO choice) {
+		boolean result = false;
+
+		int s_code = choice.getS_code();
+		int q_number = choice.getQ_number();
+		int choice_num = choice.getChoice_num();
+		String choice_content = choice.getChoice_content();
+
+		String sql = "INSERT INTO choices VALUES(?,?,?,?);";
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		try {
+			con = DbManager.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, s_code);
+			pstmt.setInt(2,  q_number);
+			pstmt.setInt(3,  choice_num);
+			pstmt.setString(4, choice_content);
+			result = (pstmt.executeUpdate() > 0);
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		catch (NamingException e) {
+			e.printStackTrace();
+		} 
+		finally {
+			DbManager.close(pstmt);
+			DbManager.close(con);
+		}
+		return result;
+	}
+}

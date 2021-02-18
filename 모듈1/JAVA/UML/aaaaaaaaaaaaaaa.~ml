@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XPD:PROJECT xmlns:XPD="http://www.staruml.com" version="1">
+<XPD:HEADER>
+<XPD:SUBUNITS>
+</XPD:SUBUNITS>
+<XPD:PROFILES>
+</XPD:PROFILES>
+</XPD:HEADER>
+<XPD:BODY>
+<XPD:OBJ name="DocumentElement" type="UMLProject" guid="CquRljFXL0mxNt+flentswAA">
+<XPD:ATTR name="Title" type="string">Untitled</XPD:ATTR>
+<XPD:ATTR name="#OwnedElements" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="3e/pilhbAkaIdfbovIPGsgAA">
+<XPD:ATTR name="Name" type="string">Model1</XPD:ATTR>
+<XPD:REF name="Namespace">CquRljFXL0mxNt+flentswAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="peK/r5cS6EeS8DKOAMSRAAAA">
+<XPD:ATTR name="Name" type="string">ClassDiagram1</XPD:ATTR>
+<XPD:REF name="DiagramOwner">3e/pilhbAkaIdfbovIPGsgAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="x+K4/cJhIECQBxu4GPZLMwAA">
+<XPD:REF name="Diagram">peK/r5cS6EeS8DKOAMSRAAAA</XPD:REF>
+<XPD:ATTR name="#OwnedViews" type="integer">4</XPD:ATTR>
+<XPD:OBJ name="OwnedViews[0]" type="UMLClassView" guid="jHMB3psUY0OviPOHOt+dZwAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">8</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">40</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">233</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">265</XPD:ATTR>
+<XPD:REF name="Model">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+<XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="lE60Uj3v90emdtp1Pfr0pQAA">
+<XPD:OBJ name="NameLabel" type="LabelView" guid="O/EkD5A54kGBrP+Kn3hxuAAA">
+<XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">MultiChatServer</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="StereotypeLabel" type="LabelView" guid="Dg3Cb7JvcE6lBVh6EzeduQAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="PropertyLabel" type="LabelView" guid="f+jXeKMKYEyLf3UK05iQCwAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="AttributeCompartment" type="UMLAttributeCompartmentView" guid="z3onNdkqb0OtvR3Y+qFLjAAA">
+<XPD:REF name="Model">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OperationCompartment" type="UMLOperationCompartmentView" guid="Q3Q7MCzrPEatCw1iAM1WYQAA">
+<XPD:REF name="Model">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="TemplateParameterCompartment" type="UMLTemplateParameterCompartmentView" guid="r1xew4BVIUarqmbRe/Y0ngAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+<XPD:REF name="Model">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[1]" type="UMLTextView" guid="htPw2+qVT0yEGfRlsA7GEwAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">16</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">361</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">23</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">클라이언트로부터 들어온 문자열을 모든 다른 클라이언트 들에게 보내기
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[2]" type="UMLClassView" guid="D6zahNX/cUyWV5yvqyJ67wAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">12</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">184</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">183</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">95</XPD:ATTR>
+<XPD:REF name="Model">vz8NrB4JoUuu/R0KvYIsxwAA</XPD:REF>
+<XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Zt4DdRajgEOFBFGpMypB9wAA">
+<XPD:OBJ name="NameLabel" type="LabelView" guid="fyrVWK5a9Eiw3GYW/pjooAAA">
+<XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">ClientThread</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="StereotypeLabel" type="LabelView" guid="0TqU0dQyIkeRfr8frYtyEwAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="PropertyLabel" type="LabelView" guid="00lWxwEfxka0sxo3P1wG9QAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="AttributeCompartment" type="UMLAttributeCompartmentView" guid="sdiHqhNVkESklPSkzebo0wAA">
+<XPD:REF name="Model">vz8NrB4JoUuu/R0KvYIsxwAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OperationCompartment" type="UMLOperationCompartmentView" guid="26Z/0xIe6k+In8Dds1XTTQAA">
+<XPD:REF name="Model">vz8NrB4JoUuu/R0KvYIsxwAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="TemplateParameterCompartment" type="UMLTemplateParameterCompartmentView" guid="5GZzQ2lNwEe8gDXilc0WwQAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+<XPD:REF name="Model">vz8NrB4JoUuu/R0KvYIsxwAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[3]" type="UMLTextView" guid="mcwWvKkJWUujaEkEp/BKsQAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">240</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">152</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">388</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">143</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">run() 에서는 ClientIn으로부터 수신된 문자열을
+MultiChatServer의 클라이언트 컬렉션에 저장되어 있는
+스트림을 통해서 전송한다. 이 때 메시지 수신은 MultiChatServer의 
+forward()를 이용한다. 클라이언트 하나당 이 스레드하나가 실행됨
+생성자에서는 소켓으로부터 입력스트림, 출력스트림, 호스트 이름을 추출한후
+MutiChatServer의 클라이언트컬렉션에 호스트이름을 키로 출력스트림을
+값으로 저장하고 입력스트림은 멤버에 저장한ㄷ.
+이때 모든 클라이언트에 &quot;XXX 호스트가 입장하였습니다.&quot; 알림
+BufferedReader, BufferedWriter 를 빼고 구현해보아라
+</XPD:ATTR>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:ATTR name="#OwnedElements" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="OwnedElements[0]" type="UMLClass" guid="ni2whBDiq0i58DvDs97AGgAA">
+<XPD:ATTR name="Name" type="string">MultiChatServer</XPD:ATTR>
+<XPD:REF name="Namespace">3e/pilhbAkaIdfbovIPGsgAA</XPD:REF>
+<XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
+<XPD:REF name="Views[0]">jHMB3psUY0OviPOHOt+dZwAA</XPD:REF>
+<XPD:REF name="Views[1]">z3onNdkqb0OtvR3Y+qFLjAAA</XPD:REF>
+<XPD:REF name="Views[2]">Q3Q7MCzrPEatCw1iAM1WYQAA</XPD:REF>
+<XPD:REF name="Views[3]">r1xew4BVIUarqmbRe/Y0ngAA</XPD:REF>
+<XPD:ATTR name="#Operations" type="integer">5</XPD:ATTR>
+<XPD:OBJ name="Operations[0]" type="UMLOperation" guid="9OHOdr+brkKDuO8eWKv6GAAA">
+<XPD:ATTR name="Name" type="string">MultiChatServer</XPD:ATTR>
+<XPD:REF name="Owner">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="ypBD2EwEtUasacVjrI8owwAA">
+<XPD:ATTR name="Name" type="string">portNumber</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">9OHOdr+brkKDuO8eWKv6GAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[1]" type="UMLOperation" guid="ip6/g/G1qkq5TnO7Rg1LgQAA">
+<XPD:ATTR name="Name" type="string">serverStart</XPD:ATTR>
+<XPD:REF name="Owner">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="Oag3IjReKEe7Y/IRbF1JlQAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">void</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">ip6/g/G1qkq5TnO7Rg1LgQAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[2]" type="UMLOperation" guid="vR5+xJIc2kWYS49MCM5QzAAA">
+<XPD:ATTR name="Name" type="string">main</XPD:ATTR>
+<XPD:REF name="Owner">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="BpKghVaRzUCJd/2p05BxoAAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">void</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">vR5+xJIc2kWYS49MCM5QzAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="fEO8spMK3EK25koGwHqrKgAA">
+<XPD:ATTR name="Name" type="string">args</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String[]</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">vR5+xJIc2kWYS49MCM5QzAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[3]" type="UMLOperation" guid="M7ju7b8jqkqYku01zvVsOwAA">
+<XPD:ATTR name="Name" type="string">addClient</XPD:ATTR>
+<XPD:REF name="Owner">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="nhvsJNtiA0u5OiC+VbjBIgAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">void</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">M7ju7b8jqkqYku01zvVsOwAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="0ZI47iAg0EG0nWXGQvq40AAA">
+<XPD:ATTR name="Name" type="string">clientSocket</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">Socket</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">M7ju7b8jqkqYku01zvVsOwAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[4]" type="UMLOperation" guid="CrGHQzMgfUqBij3G1QJeQgAA">
+<XPD:ATTR name="Name" type="string">forward</XPD:ATTR>
+<XPD:REF name="Owner">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">3</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="yeySmseGgk2u2MApL/luqAAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">void</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">CrGHQzMgfUqBij3G1QJeQgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="wstjgjYbkUCuhx5xUUft/AAA">
+<XPD:ATTR name="Name" type="string">host</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">CrGHQzMgfUqBij3G1QJeQgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="026+qsPkkk+JC4w862cwRwAA">
+<XPD:ATTR name="Name" type="string">message</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">CrGHQzMgfUqBij3G1QJeQgAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:ATTR name="#Attributes" type="integer">3</XPD:ATTR>
+<XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="RNPyoNpPTUaC/hLjCmQ7BgAA">
+<XPD:ATTR name="Name" type="string">client</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">HashMap&lt;String, PrintWriter&gt;</XPD:ATTR>
+<XPD:REF name="Owner">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="BAmeBlcuN0uXtUn0ZverNAAA">
+<XPD:ATTR name="Name" type="string">serverSocket</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">ServerSocket</XPD:ATTR>
+<XPD:REF name="Owner">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="a1b/5XNKcEyTehWUapL2/QAA">
+<XPD:ATTR name="Name" type="string">portNumber</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:REF name="Owner">ni2whBDiq0i58DvDs97AGgAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[1]" type="UMLClass" guid="vz8NrB4JoUuu/R0KvYIsxwAA">
+<XPD:ATTR name="Name" type="string">ClientThread</XPD:ATTR>
+<XPD:REF name="Namespace">3e/pilhbAkaIdfbovIPGsgAA</XPD:REF>
+<XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
+<XPD:REF name="Views[0]">D6zahNX/cUyWV5yvqyJ67wAA</XPD:REF>
+<XPD:REF name="Views[1]">sdiHqhNVkESklPSkzebo0wAA</XPD:REF>
+<XPD:REF name="Views[2]">26Z/0xIe6k+In8Dds1XTTQAA</XPD:REF>
+<XPD:REF name="Views[3]">5GZzQ2lNwEe8gDXilc0WwQAA</XPD:REF>
+<XPD:ATTR name="#Operations" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Operations[0]" type="UMLOperation" guid="T0hGvdCo30CP6XuvFV7+/QAA">
+<XPD:ATTR name="Name" type="string">ClientThread</XPD:ATTR>
+<XPD:REF name="Owner">vz8NrB4JoUuu/R0KvYIsxwAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="T3RZ5wuLl0G2kppV6EFUuwAA">
+<XPD:ATTR name="Name" type="string">clientSocket</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">Socket</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">T0hGvdCo30CP6XuvFV7+/QAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[1]" type="UMLOperation" guid="EQVI8wqCW0yKNOo2MbfqFwAA">
+<XPD:ATTR name="Name" type="string">run</XPD:ATTR>
+<XPD:REF name="Owner">vz8NrB4JoUuu/R0KvYIsxwAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="XkAov8+9iEi4e9V1qTLjdQAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">void</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">EQVI8wqCW0yKNOo2MbfqFwAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:ATTR name="#Attributes" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="VFzwiKOiSEmOgWvbmUC9xAAA">
+<XPD:ATTR name="Name" type="string">clientIn: BufferedReader</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:REF name="Owner">vz8NrB4JoUuu/R0KvYIsxwAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="rmibXxy0xUiQB9y5mMv4pwAA">
+<XPD:ATTR name="Name" type="string">host: String</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:REF name="Owner">vz8NrB4JoUuu/R0KvYIsxwAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:BODY>
+</XPD:PROJECT>

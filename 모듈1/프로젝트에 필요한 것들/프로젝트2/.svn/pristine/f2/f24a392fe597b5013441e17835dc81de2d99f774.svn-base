@@ -1,0 +1,34 @@
+$.fn.bindResultClick = function(){
+	this.click(function(){
+		$('#subTitle').css("display","block");
+		$('.subjectiveR').css("display","block");
+		
+	})
+}
+function loadSurvey(){
+	var address = unescape(location.href);
+	var loc = address.indexOf("?",1);
+	var s_code = '';
+	if (loc != -1) {
+		str = address.substring(loc);
+		var arr1 = str.split('&');
+		var arr2 = arr1[0].split('=');
+		s_code = arr2[1];
+	}
+	$.ajax({
+		url:'../QuestionResultGet.do',
+		type:'Post',
+		data:s_code,
+		success:function(data){
+			console.log("success : " + data);
+		}
+	})
+    
+   
+}
+
+$(document).ready(function(){
+	loadSurvey();
+	
+	$('.resultMid > ul > li').bindResultClick();
+})

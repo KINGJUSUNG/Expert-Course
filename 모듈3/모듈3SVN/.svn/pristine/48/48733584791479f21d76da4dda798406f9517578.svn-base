@@ -1,0 +1,69 @@
+GET(조회), POST(등록), PUT(등록, 수정), DELETE(삭제) => 메소드
+GET => 목록보기
+HEAD => 상세보기
+
+GET	/dinner41/login 		로그인화면
+GET	/dinner41/register		회원가입폼
+POST        /dinner41/register	 	회원가입 입력처리
+GET	/dinner41/password 	비밀번호 찾기폼
+POST	/dinner41/password 	비밀번호 찾기처리(입력 : 이메일)
+
+GET	/dinner41/home 		메인페이지
+GET	/dinner41/map		매장위치지도검색폼
+GET	/dinner41/mypage		마이페이지 보기
+PATCH	/dinner41/mypage		마이페이지 수정폼
+POST	/dinner41/mypage 		마이페이지 수정처리
+DELETE    /dinner41/mypage		마이페이지 탈퇴
+
+GET	/dinner41/gm/{page}/review		후기목록보기
+GET	/dinner41/gm/review 		후기폼
+POST	/dinner41/gm/review 		후기입력처리
+
+GET	/dinner41/{type}/{page}/qna	 	QnA목록보기
+HEAD	/dinner41/{id}/qna			QnA상세보기
+POST	/dinner41/ad/{id}/qna 		QnA답변하기
+GET	/dinner41/qna			QnA폼
+POST	/dinner41/qna			QnA입력처리
+
+GET	/dinner41/gm/cart		장바구니보기
+POST	/dinner41/gm/cart 		장바구니폼전송
+
+GET	/dinner41/gm/{page}/order 		일반회원 주문 목록보기
+HEAD	/dinner41/gm/{id}/order		일반회원 주문 상세보기
+GET	/dinner41/gm/order 		주문폼
+POST	/dinner41/gm/order 		주문입력처리
+
+GET	/dinner41/sm/{page}/order 		점주회원 주문 목록보기
+HEAD	/dinner41/sm/{id}/order		점주회원 주문 상세보기
+
+
+=> condition : 카테고리로 목록을 요청했는지, 검색으로 목록을 요청했는지를 구분
+=> keyword : 카테고리명 혹은 검색어
+GET	/dinner41/gm/{condition}/{keyword}/{page}/store	일반회원 매장목록 보기 
+HEAD	/dinner41/gm/{id}/store				일반회원 매장정보 상세보기(일반회원 메뉴목록 보기는 이 안에서, 페이징도 해야함)
+
+HEAD	/dinner41/store	 점주회원 매장상세보기
+GET	/dinner41/store	 점주회원 매장등록 및 수정폼
+POST	/dinner41/store	 점주회원 매장등록 및 수정처리
+
+GET	/dinner41/sm/menu			점주회원 메뉴목록보기	
+HEAD	/dinner41/{store-id}/{menu-id}/menu 		점주(일반)회원 메뉴정보 상세보기
+GET	/dinner41/menu	 			점주회원 메뉴등록 및 수정폼
+POST	/dinner41/menu/	 			점주회원 메뉴등록 및 수정처리
+
+GET	/dinner41/ad/{store-name}/{page}/store		관리자매장목록보기
+HEAD	/dinner41/ad/{store-id}/store			관리자매장상세보기
+
+
+
+
+
+
+
+
+
+
+
+
+
+

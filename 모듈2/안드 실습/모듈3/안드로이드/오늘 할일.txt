@@ -1,0 +1,9 @@
+ThreadTest에 MainActivity2.java 분석(핸들러없이 스레드간 통신.  runOnUIThread 메서드 확실히 이해)
+LooperTest에서 thread공부(스레드를 양방향으로 보내고 받기)
+서비스 - 백그라운드에서 도는 실행의 흐름
+ServiceTest - startedService 확실히 이해하기
+ServiceTest2 - bind
+PreferenceTest - 뒤로가기 버튼 누르면 기존 정보 지워짐. 이 때 간단한 정보를 저장시키는 것이 SharedPreference임
+
+태스크 관리
+리사이클러 뷰

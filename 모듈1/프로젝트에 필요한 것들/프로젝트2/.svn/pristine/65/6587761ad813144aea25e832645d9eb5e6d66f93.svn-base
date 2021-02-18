@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css/surveyForm.css">
+</head>
+<body>
+<div class="surwrap">
+	<div class="sTop">
+		<ul>
+			<li>작성자 : ${userInfo.nick }</li>
+			<li><input type="text" id="surveyName" placeholder="      제목을 입력 하세요.">
+			<select>
+				<option>김주성</option>
+				<option>바보</option>
+				<option>멍청이</option>
+			</select></li>
+			<li>설문 결과를 <label for="open"><input type="radio" id="open" name="open" value="y" checked>공개</label>
+			<label for="close"><input type="radio" id="close" name="open" value="n">비공개</label>합니다.</li>
+		</ul>
+	</div>
+	<div class="sMid">
+	</div>
+	<div class="sBottom">
+	</div>
+</div>
+</body>
+</html>

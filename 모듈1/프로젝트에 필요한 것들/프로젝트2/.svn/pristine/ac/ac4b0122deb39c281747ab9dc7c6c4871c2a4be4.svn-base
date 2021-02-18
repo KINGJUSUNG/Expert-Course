@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div id="subTitle"> 주관식 결과 </div>
+<div class="subjectiveR">
+	<ul>
+		<li>홍익대학교 미대</li>
+		<li>숭실대학교 컴학</li>
+		<li>숭실대학교 컴학</li>
+		<li>숭실대학교 소프트웨어</li>
+		<li>숭실대학교 소프트웨어</li>
+		<li>숭실대학교 전정공</li>
+		<li>숭실대학교 전정공</li>
+		<li>숭실대학교 벤처</li>
+		<li>숭실대학교 벤처</li>
+		<li>국민대학교 빅데이터</li>
+		<li>홍익대학교 미대</li>
+		<li>인천대학교 전자공</li>
+		<li>서울대학교 경영</li>
+		<li>숭실대학교 회계</li>
+		<li>가톨릭대학교 생명공</li>
+		<li>고려대학교 자유전공</li>
+		<li>연세대학교 의대</li>
+		<li>연세대학교 기계공</li>
+		<li>한양대학교 화공</li>
+		<li>성균관대학교 생명</li>	
+	</ul>
+</div>

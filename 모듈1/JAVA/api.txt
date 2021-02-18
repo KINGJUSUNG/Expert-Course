@@ -1,0 +1,30 @@
+hashCode() : int 
+해쉬값은 객체를 대표하는 식별자이다.
+Person p = new Person();
+System.out.println(p);
+// 이 때 ~~@~~ 여기서 @뒤는 객체의 해쉬값이다. 
+
+해쉬는 말그대로 객체간의 데이터가 같으면 같은 것이다. 예를 들어
+
+class A {
+int a;
+int b;
+}
+
+clss B {
+int x;
+int y;
+}
+
+A a = new A(1, 2);
+B b = new B(1, 2);
+
+이 때 a 와 b 의 hash 값은 같음.
+
+객체배열을 정렬하기 위해 객체의 클래스에 반드시 compareTo 가 구현되어있어야함. 그리구 Comparable 인터페이스도 구현해야함
+compareTo
+equalTo
+
+Wrapper 가 필요한 이유
+generic 은 객체타입만 받을 수 있음. 왜?  제네릭
+

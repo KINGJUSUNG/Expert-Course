@@ -1,0 +1,20 @@
+
+
+===수정한 부분===
+<WebContent / script>
+responseSurvey.js
+
+<WebContent/ WEB-INF>
+web.xml
+
+<com.surveypro.choiceresult 관련 패키지 전부>
+
+<com.surveypro.subjectiveresult 관련 패키지 전부>
+
+<com.surveypro.vo>
+ChoiceResultVO.java
+SubjectiveResultVO.java
+
+<com.surveypro.dao>
+ChoiceResultDAO.java
+SubjectiveResultDAO.java

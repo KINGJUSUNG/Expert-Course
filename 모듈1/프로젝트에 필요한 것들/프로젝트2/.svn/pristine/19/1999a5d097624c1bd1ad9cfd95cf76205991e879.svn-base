@@ -1,0 +1,122 @@
+var queNum=0;
+var MAX_QUE=11;
+var MAX_CHO=7;
+var MIN_QUE=0;
+var MIN_CHO=2;
+$.fn.bindAddClick=function(){
+	
+	$('.sMid>.questionList #addChoice').click(function(){
+		let a = $(this).val();
+		let ul = $(this).closest('li').closest('ul');
+		console.log("추가:"+a);
+		$(ul).find("li:nth-child("+a+")>input").css("display","inline-block");
+		console.log("추가:"+a);
+		++a;
+		$(this).val(a>MAX_CHO?MAX_CHO:a);
+		$(this).siblings('button#deleteChoice').val(a>MAX_CHO?MAX_CHO:a);
+		
+	})
+	
+	$('.sMid > .questionCond #addQuestion').click(function(){
+		
+		if(++queNum >=11){
+			queNum = MAX_QUE;
+			alert("문항의 최대 개수는 "+(queNum-1)+"개 입니다.")
+			return;
+		}
+		console.log("추가"+queNum);
+		$(".surwrap>.sMid>.questionList>ul:nth-child("+queNum+")").css("display","inline-block");
+		
+		$(".questionList>ul:nth-child("+queNum+")>li#qt").css("display","inline-block");
+		$(".questionList>ul:nth-child("+queNum+")>li#qt>input").css("display","inline-block");
+		if($('.sMid>.questionCond>ul>li input:checked').val() == "C"){
+			$(".questionList>ul:nth-child("+queNum+")>li>button").css("display","inline-block");
+		}		
+		else{
+			$(".questionList>ul:nth-child("+queNum+")>li>button").css("display","none");
+		}
+		
+		
+		
+	})
+}
+$.fn.bindDeleteClick=function(){
+	$('.sMid>.questionList #deleteChoice').click(function(){
+		let a = $(this).val()-1 < 2 ? 2 : $(this).val()-1 ;
+		let ul = $(this).closest('li').closest('ul');
+		console.log("삭제:"+a);
+		$(ul).find("li:nth-child("+a+")>input").css("display","none");
+		console.log("삭제:"+a);
+		$(this).val(a);
+		$(this).siblings('button#addChoice').val(a);
+	})
+	$('.sMid > .questionCond #deleteQuestion').click(function(){
+		
+		if (queNum == 0) {
+			alert("삭제 할 문항이 존재하지 않습니다.");
+			return;
+		}
+		
+		console.log("삭제"+queNum);
+		$(".questionList>ul:nth-child("+queNum+")>li>button").css("display","none");
+		$(".questionList>ul:nth-child("+queNum+")>li#qt>input").css("display","none");
+		$(".questionList>ul:nth-child("+queNum+")>li>input").css("display","none");
+		$(".questionList>ul:nth-child("+queNum+")>li#qt").css("display","none");
+		$(".surwrap>.sMid>.questionList>ul:nth-child("+queNum+")").css("display","none");
+		
+		if(--queNum <= 0){
+			queNum = MIN_QUE;
+		};
+	})
+}
+
+$.getCategoryList = function(){
+	$('#selectBox option').remove();
+	$.ajax({
+		url:'../CategoryGetAll.do',
+		type:'get',
+		success:function(data){
+			console.log(data);
+			for(let i = 0; i < data.categories.length; i++){
+				let category = data.categories[i];
+				let obj = $('<option/>' + 
+				category.c_desc + '</option>');
+				obj.data("c_code", category.c_code)
+				$('#selectBox').append(obj);
+			}
+		}
+	})
+}
+
+$.fn.bindSurveySubmit = function(){
+	this.click(function(){
+		$.ajax({
+			url:'../SurveyInsert.do',
+			type:'post',
+			data:{
+				s_title:$('#surveyName').val(),
+				email: $('#writerInfo').data('writer'),
+				c_code: $('#selectBox option:selected').data('c_code'),
+				s_public: $('input[name=open]:checked').val()
+			},
+			success:function(data){
+				if(data.result){
+					alert(data.message);
+					location.href = "index.jsp";
+				}
+				else{
+					alert(data.message);
+					location.reload();
+				}
+			}
+			
+		})
+	})
+}
+$(document).ready(function(){
+	$.getCategoryList();
+	$('.sMid>.questionCond #addQuestion').bindAddClick();
+	$('.sMid>.questionCond #deleteQuestion').bindDeleteClick();
+	$('#SurveyReply').bindSurveySubmit();
+	
+})

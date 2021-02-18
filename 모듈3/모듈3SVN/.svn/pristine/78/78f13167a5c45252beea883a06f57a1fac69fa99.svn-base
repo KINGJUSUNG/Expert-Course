@@ -1,0 +1,23 @@
+0000000000000000000000000000000000000000 71c1236dc40b01f8639c4180dcafbd696a23b7f9 KIMJUSUNG <dlrtls12345@naver.com> 1597651040 +0900	branch: Created from develop
+71c1236dc40b01f8639c4180dcafbd696a23b7f9 231c513cf06466a6c7664cb4abfc0b6cebfb41be KIMJUSUNG <dlrtls12345@naver.com> 1597670396 +0900	commit: 결제 v2
+231c513cf06466a6c7664cb4abfc0b6cebfb41be b953a4de73aa090fb116f7af18f92ab6369de67d KIMJUSUNG <dlrtls12345@naver.com> 1597671443 +0900	merge develop: Fast-forward
+b953a4de73aa090fb116f7af18f92ab6369de67d 58cf02b28b067501b7ea7ca06bb4f82a8c76f64c KIMJUSUNG <dlrtls12345@naver.com> 1597682556 +0900	commit: MANIFEST.MF
+58cf02b28b067501b7ea7ca06bb4f82a8c76f64c 7c992b1252c6606572bc0f8bd66e83ffc09f33e5 KIMJUSUNG <dlrtls12345@naver.com> 1597682597 +0900	merge develop: Merge made by the 'recursive' strategy.
+7c992b1252c6606572bc0f8bd66e83ffc09f33e5 c28ee1edd91c5641b8298f0d8000f6bf319a6355 KIMJUSUNG <dlrtls12345@naver.com> 1597683009 +0900	merge develop: Merge made by the 'recursive' strategy.
+c28ee1edd91c5641b8298f0d8000f6bf319a6355 32ed7c84dadf7d348b7e04ce3f04189b8a2f7010 KIMJUSUNG <dlrtls12345@naver.com> 1597683049 +0900	commit: 메뉴 컨트롤러 수정
+32ed7c84dadf7d348b7e04ce3f04189b8a2f7010 728a8c65290c302c364e4b1098c088f576e387d2 KIMJUSUNG <dlrtls12345@naver.com> 1597713070 +0900	commit: 점주회원 메뉴리스트(페이징 처리는 안됨)
+728a8c65290c302c364e4b1098c088f576e387d2 4ae0e9ea194291bd9aad1252ea08fa0c055f22ce KIMJUSUNG <dlrtls12345@naver.com> 1597752239 +0900	commit: 복구할 수 있을 것인가
+4ae0e9ea194291bd9aad1252ea08fa0c055f22ce fa184306966183bcbdce5c3d0ae2ea7769a89b94 KIMJUSUNG <dlrtls12345@naver.com> 1597755828 +0900	commit (merge): 첫번째 도약...
+fa184306966183bcbdce5c3d0ae2ea7769a89b94 d72e3fb55ad1d5857f81cdd5447c316296f1e91c KIMJUSUNG <dlrtls12345@naver.com> 1597770382 +0900	commit: hellohello
+d72e3fb55ad1d5857f81cdd5447c316296f1e91c 29fd45814bdaeee99e5b5ab35bd99229ff4bf766 KIMJUSUNG <dlrtls12345@naver.com> 1597777511 +0900	merge develop: Fast-forward
+29fd45814bdaeee99e5b5ab35bd99229ff4bf766 7c8aa23f21dd908ed4afa9626fbd166167f1643e KIMJUSUNG <dlrtls12345@naver.com> 1597777557 +0900	commit: good
+7c8aa23f21dd908ed4afa9626fbd166167f1643e 1c18aa858281844628112e551a31a442ff4a2065 KIMJUSUNG <dlrtls12345@naver.com> 1597821793 +0900	merge develop: Merge made by the 'recursive' strategy.
+1c18aa858281844628112e551a31a442ff4a2065 b2de4c4a80f5afc42ae53ddb2d5159e1609ab0f6 KIMJUSUNG <dlrtls12345@naver.com> 1597840185 +0900	commit: 주성의 커밋
+b2de4c4a80f5afc42ae53ddb2d5159e1609ab0f6 29a5c57a3807c73f6c134f62493bfa687b6ff9ab KIMJUSUNG <dlrtls12345@naver.com> 1597840836 +0900	pull origin develop: Fast-forward
+29a5c57a3807c73f6c134f62493bfa687b6ff9ab 141cecca87ad8c3ac5677ec819a9f4fc75df01ce KIMJUSUNG <dlrtls12345@naver.com> 1597841018 +0900	commit: 주성
+141cecca87ad8c3ac5677ec819a9f4fc75df01ce 701c2c482b6a8f717b557cf296364f12b04123cd KIMJUSUNG <dlrtls12345@naver.com> 1597908130 +0900	merge develop: Merge made by the 'recursive' strategy.
+701c2c482b6a8f717b557cf296364f12b04123cd 61b41b7f28f82703e35f4c8b2e46c25237b998c7 KIMJUSUNG <dlrtls12345@naver.com> 1597920092 +0900	commit: jusung's last commit
+61b41b7f28f82703e35f4c8b2e46c25237b998c7 028944e2e97e558baf64c29e890c893a4fa7bb5e KIMJUSUNG <dlrtls12345@naver.com> 1597930693 +0900	commit: 마지막 커밋일줄 알았는데...
+028944e2e97e558baf64c29e890c893a4fa7bb5e 61b41b7f28f82703e35f4c8b2e46c25237b998c7 KIMJUSUNG <dlrtls12345@naver.com> 1597930722 +0900	reset: moving to HEAD^
+61b41b7f28f82703e35f4c8b2e46c25237b998c7 a190fdad43f58478c5ae2fc44dcc7bfdaa0573d7 KIMJUSUNG <dlrtls12345@naver.com> 1597930745 +0900	commit: 마지막이 아닌데..?
+a190fdad43f58478c5ae2fc44dcc7bfdaa0573d7 61b41b7f28f82703e35f4c8b2e46c25237b998c7 KIMJUSUNG <dlrtls12345@naver.com> 1597931899 +0900	reset: moving to HEAD^

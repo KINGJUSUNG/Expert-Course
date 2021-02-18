@@ -1,0 +1,39 @@
+mariaDB 설치
+// 먼저 DB 설치가 우선
+
+net start mysql
+// 서버를 구동
+net stop mysql
+// 서버를 종료
+
+<계정 관리>
+mysql -uroot -p
+// root라는 계정으로 접속. -p옵션은 비밀번호를 입력받겠다는 것
+
+mysql -uroot -p mysql < "CREATE_USER.txt" > "result.txt"
+// root라는 계정으로 mysql이라는 데이터베이스에 접속해라. 근데 입력은 저 파일에서 받아라.
+// 그리고 그 결과를 result.txt파일에 출력해라
+// sql문이 길거나 콘솔에서 입력하기 불편할 때 사용해라
+
+SELECT host, user FROM USER;
+// 계정정보들 확인
+
+CREATE USER jusung@'%' IDENTIFIED BY '1011';
+// jusung 이라는 계정 생성
+// %는 모든 주소에서 접근가능하다는 의미
+
+GRANT ALL PRIVILEGES ON [디비이름].[테이블이름] TO jusung@'%' IDENTIFIED BY '1011' [WITH GRANT OPTION];
+// jusung이라는 계정에 모든 데이터베이스의 모든 테이블에 대한 모든 권한을 부여
+// 그러나 GRANT권한은 옵션으로 따로 지정해서 주어야함
+
+REVOKE ALL PRIVILEGES ON [디비이름].[테이블이름] FROM jusung@'%';
+// 이때 중요한 건 부여한 권한 단위로 뺏어야 한다. 개별적으로 뺏을 수 없다.
+
+SHOW GRANTS FOR jusung@'%';
+// 권한 확인
+
+DROP USER jusung@'%';
+// 계정삭제
+
+SET PASSWORD FOR juyeoup = PASSWORD('1998');
+// 계정비밀번호변경

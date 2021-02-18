@@ -1,0 +1,11 @@
+public HashMap<String, Object> convertMap() {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("writer", writer);
+		map.put("s_title", s_title);
+		map.put("interest_count", interest_count);
+		map.put("written_date", written_date);
+		map.put("end_date", end_date);
+		map.put("spare_sample_num", spare_sample_num);
+		map.put("price", price);
+		return map;
+	}

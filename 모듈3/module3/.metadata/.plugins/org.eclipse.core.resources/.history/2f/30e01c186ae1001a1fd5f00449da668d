@@ -1,0 +1,5 @@
+package kr.co.dinner41.exception.login;
+
+public class SendEmailFailedException extends LoginException {
+
+}

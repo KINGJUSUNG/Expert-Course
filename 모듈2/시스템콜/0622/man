@@ -1,0 +1,11 @@
+// process
+getpid();
+getppid();
+fork();
+wait();
+waitpid();
+
+// program
+execl();
+execv();
+wait();

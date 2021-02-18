@@ -1,0 +1,172 @@
+- 열거형
+public enum 열거타입이름 {...}
+public enum Week {MONDAY, TUESDAY, ...}
+Week today = Week.MONDAY; // 이렇게 사용
+자바는 첫 열거형 멤버가 자동으로 0으로 초기화 안됨. 그 자체가 새로운 데이터 타입임.
+열거형 변수는 그 자체가 레퍼런스 타입임. 즉 today는 Week 타입의 레퍼런스 변수임.
+
+enum Country {
+	KOREA("대한민국"), AMERICA("미국"), CANADA("캐나다"), ENGLAND("영국");
+	private String name;
+	private Country(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+}
+
+public class AppStart {
+	public static void main(String[] args) {
+		Country c = Country.KOREA;
+		// enum 은 new는 사용 불가
+		// enum 변수에 값을 대입하는 순간 Country 의 생성자가 호출됨
+		// 생성자의 인자로 KOREA에 딸려있는 "대한민국" 이라는 문자열이 보내짐
+		// name 은 "대한민국" 으로 초기화됨
+		c = Country.AMERICA; // 이럴때마다 인스턴스가 생성되는 것임
+		System.out.println(c.getName());
+	}	
+}
+
+---------------------------------------------------------------------------------------------------------
+
+public enum City {
+	SEOUL(0), BUSAN(250), KWANGJU(95), DAEJEON(34), JEJU(500);
+	private int km;
+	
+	private City(int km) {
+		this.km = km;
+	}
+	
+	public int getDistance() {
+		return km;
+	}
+}
+
+public class AppStart {
+	public static void main(String[] args) {
+		City c = City.BUSAN;
+		int num = Subject.KOR;
+		System.out.println(c.getDistance());
+		System.out.println(num);
+	}
+}
+
+---------------------------------------------------------------------------------------------------------
+
+- 객체 지향
+객체 : 속성, 행위를 가짐. 이를 설계, 프로그램 관점에서는 필드, 메소드를 가진다고 함
+정확히는 멤버필드, 멤버메소드 라고한다
+자바에서 객체는 생성되면 반드시 힙에 할당된다
+
+- 클래스 :  생성되는 객체의 사양(Specification)이다
+[접근제한자] [지정예약어] class 클래스명
+[extends 클래스명] [implements 인터페이스명,...] {
+	// 멤버 선언 및 정의
+}
+
+- 멤버필드
+[접근제한자] [지정예약어] 자료형 필드명 [=초기값];
+
+- 메소드
+[접근제한자] [지정예약어] 리턴결과형 메소드명 ([인수목록]) [throws 예외클래스] {
+	// 메소드 구현부
+}
+메소드 호출은 2단계 : 승인, 실행
+메소드는 호출을 위해 컴파일 타임에 승인을 받아야함. 메소드는 메소드명이 식별자(identifier)지만 
+식별자만으로는 승인을 받을 수 없음. 서명이 일치해야 승인을 받을 수 있음.
+'메소드명 ([인수목록]) throws 예외클래스' 이 부분을 서명(signature)이라고 함.
+오버로딩 : 메소드명 ([인수목록])
+오버라이딩 : 메소드명 ([인수목록])  throws 예외클래스
+자바 메소드가 리턴할 수 있는 리턴타입은 모든 자료형이다
+
+- 생성자
+인수가 없는 생성자 => default 생성자 (C++과는 다름)
+생성자가 단 하나도 없을 때만 default 생성자가 컴파일러에 의해 자동으로 생성됨
+생성자 내에서 this로 다른 생성자를 호출할 수 있다. 이 때 제약이 2개 있다.
+1. 생성자 내에서 this로 다른 생성자 호출은 그 무엇보다 가장 먼저해야한다.
+2. 생성자 내에서 this로 다른 생성자 호출은 단 한번만 해야한다.
+
+- 자바의 메소드 타입
+1. Call by name // 인수없이 식별자(메소드명)만으로 호출되는 메소드
+2. Call by value // 메소드 호출 시 주어지는 인수가 기본자료형
+3. Call by reference :
+Call by reference 의 사용은 메소드 내의 변경이 메소드 종료후에도 유용하도록 하기위해 사용.
+따라서 메소드의 매개 변수가 원본이 아닌 다른 객체를 가리키는 상황이 되면 전혀 의미가 없음.
+
+Integer[] a = {1,2,4};
+for (Integer v : a) {
+	v += 10;
+	// v = v + 10;
+	// v = 11;
+	// v = new Integer(11);
+	// 따라서 v는 힙에 새로 할당된 인스턴스를 가리키게 됨
+	// v 는 a 와의 관계가 끊어지므로 a 는 바뀌지 않음
+}
+for (int i = 0; i < a.length; i++) {
+	a[i] += 10; 
+	// a[i] = a[i] + 10; 
+	// a[i] = 11;
+	// a[i] = new Integer(11);
+	// 새로 힙에 생성된 인스턴스를 다시 a[i] 가 참조하니까 원본이 바뀐 효과가 나타남
+}
+
+- Wrapper 타입 변수들 사용시 주의할 점
+Integer i = 10;
+String s = "hello";
+i는 레퍼런스 변수라 마치 변수에 10을 넣는다고 생각하기 쉽지만
+실제로는 Integer i = new Integer(10); 이 수행되는 것이다.
+즉 Wrapper 타입 변수들을 매개 변수로 하는 call by reference 는 굉장히 조심해야 할 듯함.
+
+멤버메소드는 객체를 통해서 호출되어야 한다. 왜?
+메소드는 메소드 영역에 딱 한번만 코드가 올라가고 이를 모든 객체들이 공유한다
+따라서 메소드는 호출되었을 때 어떤 객체에서 호출된 것인지 구분이 필요하다
+따라서 메소드 호출 시 객체의 this 레퍼런스 변수를 전달 하여
+메소드가 어떤 객체인지 구분 할 수 있도록 해야함
+Car c = new Car();
+c.getName(); // 즉 이 때, getName()의 전달인자에 c의 번지수가 전달됨
+
+- static
+static => 정적이다 => 한 번 메모리에 올라가면 프로그램이 종료될 때까지 내려오지 않음
+static 은 메소드 영역의 static 영역에 올라간다. 어느 시점에? 속해 있는 클래스가 최초로
+참조되는 시점(클래스 타입의 변수를 선언한다고해서 올라가는 것이 아니다.)
+static 멤버 사용의 목적 => 클래스의 공유 자원
+static 멤버는 클래스의 이름으로 참조하는 것이 원칙이다
+
+public class Jumsu {
+	static int count = 0;
+	int kor;
+	int eng;
+	
+	// static 필드 역시 클래스 로드타임에 메모리에 올라가고 실행된다
+	// static 필드는 static 멤버들을 초기화 시키기 위해 있다고 봐도 무방 
+	static {
+		System.out.println("static 필드 실행");
+		count = 0;
+		// static 메소드를 클래스 로드타임에 실행시키고 싶으면 여기에다가 호출
+	}
+
+	public Jumsu() {
+		System.out.println("생성자 호출");
+	}
+	...
+}
+
+public class AppStart {
+	
+	public static void main(String[] args) {
+		Jumsu j = new Jumsu();
+		// 최초 참조. 바로 이 시점에 static 멤버들이 메모리에 올라감
+		// 그리고 나서 생성자 호출, 즉 인스턴스가 생성됨
+		// System.out.println(Jumsu.count); 
+		// Jumsu.count++;
+		// 둘 다 역시 최초 참조임. 대신 생성자 호출은 안되는 상황
+		// 따라서 이 때는 static 멤버들만 메모리에 올라감
+	}
+}
+
+'클래스 로더'가 런타임에 클래스가 최초 참조되었을 때 클래스 정보들을 메모리에 로딩한다.
+로딩 순서 : static 멤버들을 static 영역에 로딩 => 생성자가 호출된 경우 인스턴스 생성
+static 메소드에서는 non-static 은 아예 참조할 수가 없다.
+static 메소드는 클래스이름을 통해 참조되는 멤버들이기때문에 this 레퍼런스가 넘어가지 않는다
+따라서 만약 그안에 non-static 멤버들이 있다면 이들이 어떤 객체에 소속되어 있는지 구분할 수가 없음.

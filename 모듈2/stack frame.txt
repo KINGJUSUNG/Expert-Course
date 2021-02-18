@@ -1,0 +1,17 @@
+call  foo	; 전달인자가 없는 경우
+                  ; push eip
+	; jmp foo
+
+
+call foo	; 전달인자가 int값 2개라면
+	; push eip + 2
+	; jmp foo
+
+
+ret	; pop eip
+	  jmp eip
+
+
+ret 4	; pop eip
+	  add esp, 4
+	  jmp eip

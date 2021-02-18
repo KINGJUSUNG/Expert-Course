@@ -1,0 +1,32 @@
+일반회원이 매장목록을 검색하는 시퀀스입니다.
+스토어 컨트롤러에서 스토어리스트바이유저서비스를 호출합니다.
+매장목록은 카테고리로 검색이 가능하며, 매장명,메뉴명으로도 검색할 수 있습니다
+서비스임플에서 일반회원이 카테고리를 클릭하여 검색한 것인지, 검색어를 이용하여 메뉴명,매장명으로 검색한 것인지
+분기문을 통해 판단을 한 뒤, 각각의 스토어Dao의 메소드를 호출합니다.
+
+스토어Dao의 메소드에서는 스토어아이디와 페이지정보, 사용자의 위도 경도를 바탕으로 
+쿼리문을 이용하여 매장아이디,매장명,매장사진,사용자와의 거리를 받아온 뒤,
+해당 메소드에서 reviewDao의 메소드를 이용하여 스토어아이디에 해당하는 
+평점정보까지 얻고 현재페이지정보까지 붙여서 storeListByUserViewVO를 구성한뒤 
+다시 그 값을 서비스임플로 반환합니다
+다시 컨트롤러단으로 돌아와서 storeList.jsp의 뷰를 보여주게 됩니다.
+
+
+1) HttpRequest(GET) "/gm/{category}/{keyword}/{page}/store"
+2) @("/gm/{category}/{keyword}/{page}/store")
+3) execute(category,keyword,userLatitude,userLongitude,page)
+4) 카테고리로 검색시 : selectViewByCategoryName(category,userLatitude,userLongitude,page,pageSize)
+	검색어로 검색시 : selectViewByStoreNameOrMenuName(keyword,userLatitude,userLongitude,page,pageSize)
+5) 카테고리로 검색시 : selectViewByCategoryName(category,userLatitude,userLongitude,page,pageSize)
+	검색어로 검색시 : selectViewByStoreNameOrMenuName(keyword,userLatitude,userLongitude,page,pageSize)
+6) storeId,storeName,storePhoto,distance
+7) reviewDao.getAverageScore(storeId)
+8) getAverageScore(storeId)
+9) averageScore
+10)averageScore
+11)StoreListByUserViewVO
+12)StoreListByUserViewVO
+13)storeList.jsp
+
+
+

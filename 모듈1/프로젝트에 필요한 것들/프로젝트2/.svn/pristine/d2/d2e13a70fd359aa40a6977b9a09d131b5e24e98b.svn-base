@@ -1,0 +1,49 @@
+(1) reports 테이블에서 데이터 읽어와서 출력하기
+(2) 신고 승인 이벤트 달기
+(3) 신고 반려 이벤트 달기
+(4) 관리자로 로그인 시에는 report.jsp로 이동시키기
+
+===수정한 부분===
+<WebContent / script>
+report.js
+login.js
+
+<WebContent / pages>
+report.jsp
+
+<WebContent / WEB-INF>
+web.xml
+
+<com.surveypro.dao>
+ReportDAO.java
+
+<com.surveypro.report.service>
+IReportService.java
+ReportGetAllService.java
+ReportRemoveService.java
+ReportApproveService.java
+
+<com.surveypro.report.controller>
+ReportBackController.java
+ReportGetAllController.java
+ReportRemoveController.java
+ReportApproveController.java
+
+<com.surveypro.report.exception>
+ReportException.java
+ReportApproveException.java
+ReportRemoveException.java
+
+<com.surveypro.member.controller>
+MemberLoginController.java
+MemberCheckAdminAccessController.java
+
+<com.surveypro.member.service>
+MemberLoginService.java
+MemberCheckAdminAccessService.java
+
+<com.surveypro.member.exception>
+MemberAdminAccessException.java
+
+
+

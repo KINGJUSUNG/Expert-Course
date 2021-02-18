@@ -1,0 +1,5 @@
+int game_set_cards(Player_packet **player_packets, char *answer)	 =>
+int game_init_cards(Player_packet **player_packets, char *answer)	
+
+int game_set_players(Player_packet **player_packets) =>
+int game_init_players(Player_packet **player_packets)	

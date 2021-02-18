@@ -1,0 +1,11 @@
+(1) reports 테이블에서 데이터 읽어와서 출력하기
+(2) 신고 승인 이벤트 달기
+(3) 신고 반려 이벤트 달기
+(4) 관리자로 로그인 시에는 report.jsp로 이동시키기
+
+===수정한 부분===
+<WebContent / script>
+enterSurvey.js
+showcategory.js
+surveyForm.js
+surveyList.js

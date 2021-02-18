@@ -1,0 +1,12 @@
+fork();
+read();
+write();
+execlp();
+mkfifo();
+unlink();
+open();
+
+msgget();
+msgctl();
+msgrcv();
+msgsnd();

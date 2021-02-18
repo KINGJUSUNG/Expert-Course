@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9ait2nrpc12uk9gs9badl411nqapfmc26ewaoh8wgzl5myyxffc+ncpb1dkgj7sk" crossorigin="anonymous">
+
+    <!-- optional javascript -->
+    <!-- jquery first, then popper.js, then bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-dfxdz2htph0lssss5nctpuj/zy4c+ogpamofvy38mvbne+ibbvyuew+orcxarkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-q6e9rhvbiyzfjoft+2mjbhaewldlvi9ioyy5n3zv9zzttmi3uksdqrvvoxmfooao"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-ogvrvuatp1z7jjhlkuou7xw704+h835lr+6ql9uvyjze3ipu6tp75j7bh/kr0jki"
+            crossorigin="anonymous"></script>
+
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" href="../../css/dinner41.css">
+
+    <title>order</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-light light_green">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsupportedcontent"
+            aria-controls="navbarsupportedcontent" aria-expanded="false" aria-label="toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div>
+        <h5 class="up_down_center">store manage</h5>
+    </div>
+
+    <a href="${pagecontext.request.contextpath}/">
+        <img src="${pagecontext.request.contextpath}/resources/icons/home-solid.svg" class="home" alt="no picture">
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarsupportedcontent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">내정보 보기</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">주문 내역</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="${pagecontext.request.contextpath}/all/1/qna">1:1 문의</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">로그아웃</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div>
+    <div class="container-fluid">
+        <div class="text-center" style="margin-top: 15pt">
+            <img src="../../images/1인의만찬.png" class="img-fluid img-title" alt="no title"/>
+            <h4>주문 상세</h4>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="container-fluid">
+
+        <div class="form-group row">
+            <label for="pay_id" class="col-3 col-form-label">주문번호</label>
+            <div class="col-9">
+                <input type="password" class="form-control" id="pay_id" readonly>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="user_name" class="col-3 col-form-label">주문자</label>
+            <div class="col-9">
+                <input type="password" class="form-control" id="user_name" readonly>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="phone" class="col-3 col-form-label">전화번호</label>
+            <div class="col-9">
+                <input type="password" class="form-control" id="phone" readonly>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="get_time" class="col-3 col-form-label">수령 예정 일시</label>
+            <div class="col-9">
+                <input type="password" class="form-control" id="get_time" readonly>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="pay_type" class="col-3 col-form-label">결제 수단</label>
+            <div class="col-9">
+                <input type="password" class="form-control" id="pay_type" readonly>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="pay_total" class="col-3 col-form-label">결제금액</label>
+            <div class="col-9">
+                <input type="password" class="form-control" id="pay_total" readonly>
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin: 0"/>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="container-fluid">
+                주문메뉴 : <span>개구리 뒷다리</span>
+                <br/>
+                수량 : <span>1</span> &nbsp;
+                <br/>
+                금액 : <span>10000원</span>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div class="container-fluid">
+                주문메뉴 : <span>개구리 뒷다리</span>
+                <br/>
+                수량 : <span>1</span> &nbsp;
+                <br/>
+                금액 : <span>10000원</span>
+            </div>
+        </li>
+    </ul>
+
+    <hr style="margin: 0"/>
+
+    <div class="container-fluid margin_first">
+        <button type="button" class="btn btn-outline-success three_button">상세보기</button>
+        <button type="button" class="btn btn-outline-success three_button">주문취소</button>
+        <button type="button" class="btn btn-outline-success" style="width: 32%">수령완료</button>
+    </div>
+</div>
+
+<hr/>
+
+<div class="last_block"></div>
+</body>
+</html>

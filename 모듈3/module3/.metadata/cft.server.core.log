@@ -1,0 +1,3 @@
+목 8월 13 2020 04:21:53 오후 - CloudFoundryServer.modifyModules(...): add: { dinner41 [org.eclipse.jst.jee.server:dinner41/jst.web]} remove: {}
+목 8월 13 2020 04:21:55 오후 - CloudFoundryServerBehaviour.publishModule(...): ADDED { dinner41 [org.eclipse.jst.jee.server:dinner41/jst.web]}
+목 8월 13 2020 04:21:55 오후 - CloudFoundryServerBehaviour.publishModule(...): ADDED { dinner41 [org.eclipse.jst.jee.server:dinner41/jst.web], spring-web-5.2.8.RELEASE.jar [org.eclipse.jst.jee.server:/binary:C:\Users\i\.m2\repository\org\springframework\spring-web\5.2.8.RELEASE\spring-web-5.2.8.RELEASE.jar/jst.webfragment]}

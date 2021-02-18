@@ -1,0 +1,11 @@
+package kr.co.dinner41.service.order;
+
+import java.util.List;
+
+import kr.co.dinner41.vo.Menu2OrderViewVO;
+import kr.co.dinner41.vo.OrderViewVO;
+import kr.co.dinner41.vo.UserVO;
+
+public interface OrderListService {
+	public List<OrderViewVO> execute(UserVO user, List<Menu2OrderViewVO> menuList);
+}

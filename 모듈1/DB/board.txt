@@ -1,0 +1,10 @@
+게시판 : 답글게시판 (게시글, 답글)
+
+게시글 (board)
+글번호 bnum int unsigned pk
+등록일자 regdate datetime, timestemp(14) not null
+작성자 writer varchar(50) not null
+제목 title varchar(200) not null
+내용 context medium text not null
+비밀번호 pwd varchar(20) not null
+

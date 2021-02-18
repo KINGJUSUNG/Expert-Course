@@ -1,0 +1,33 @@
+ㅇ 팀 소개
+
+ㅇ 팀원 소개
+
+ㅇ 프로젝트 소개
+  - 프로젝트 선정이유
+  - 벤치마킹 사이트 (있을 경우)
+
+ㅇ 프로젝트에서 제공하는 서비스 소개
+
+  - use case 또는 user case 소개
+
+ㅇ 프로젝트 사용 기술 및 툴 소개
+  - 기술목록
+  java / jsp & servlet / html / css / javascript / jquery / mariadb / nodejs 등 
+  - 사용 툴
+  eclipse JEE / heidiSQL / MySQL Workbench 등 
+
+ㅇ 서비스 제공 플랫폼
+  운영체제종류 / 사용 WAS  
+
+ㅇ 팀원 별 담당 부분 소개
+
+ㅇ 서비스별 클래스 다이어 그램
+
+ㅇ 서비스 별 시퀀스 다이어 그램
+
+ㅇ 시연
+
+ㅇ 후기 
+
+  - 프로젝트 보완점
+  - 프로젝트 진행시 겪었던 내용

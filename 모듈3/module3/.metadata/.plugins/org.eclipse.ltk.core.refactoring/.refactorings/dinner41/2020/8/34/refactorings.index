@@ -1,0 +1,34 @@
+1597565746378	Rename resource 'orderInsert.html'
+1597565793136	Delete element
+1597586134812	Move source folder
+1597590949456	Delete element
+1597601426663	Delete element
+1597607756199	Rename resource 'orderList.html'
+1597607793672	Delete element
+1597629017788	Delete element
+1597643481775	Rename resource 'orderView.html'
+1597643516964	Delete element
+1597715679670	Rename resource 'orderList.html'
+1597715711519	Delete element
+1597720832864	Rename type 'OrderViewVO'
+1597721094239	Rename type 'OrderViewForUserVO'
+1597741217489	Delete element
+1597747176077	Delete element
+1597747181199	Delete element
+1597758860004	Rename resource 'resources'
+1597758945173	Rename source folder 'src/main/resources'
+1597758971982	Rename source folder 'src/main/resourcesss'
+1597758985864	Rename resource 'resourcesss'
+1597762582760	Delete element
+1597766031670	Rename type 'UserNotFoundByEmailException'
+1597771147660	Rename resource 'common'
+1597771208240	Rename resource 'commons'
+1597779157537	Delete element
+1597779168825	Rename resource 'orderView.html'
+1597779208531	Delete element
+1597822369363	Delete element
+1597822501637	Rename type 'OrderUpdateServiceImpl'
+1597822524304	Rename type 'OrderUpdateService'
+1597841547000	Delete elements
+1597842074806	Delete element
+1597842097774	Delete element

@@ -1,0 +1,13 @@
+package kr.co.dinner41.vo;
+
+import java.sql.Timestamp;
+
+public class OrderViewVO {
+	private int order_id;
+	private Timestamp order_reserve_date;
+	private int price;
+	private String storeName;
+	
+	public OrderViewVO() {}
+	
+}

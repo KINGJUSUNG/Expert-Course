@@ -1,0 +1,7 @@
+@charset "UTF-8";
+body{padding:0; margin:0;}
+.outwrap{ position:relative; left:100px; width:1310px; height:1000px; margin:100px 0px 100px 0px;border:1px solid black;}
+.resultwrap{width:800px; height:1000px; border:1px solid black; display:inline-block; }
+.subwrap{width:500px; height: 1000px; border:1px solid black; display:inline-block;}
+
+

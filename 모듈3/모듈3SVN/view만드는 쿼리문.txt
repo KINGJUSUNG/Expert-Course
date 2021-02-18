@@ -1,0 +1,62 @@
+* qna_view 만드는 쿼리문
+create view qna_view as 
+select 
+ qna_id, qna_type_id , q.user_id , manager_id, qna_title, qna_content, qna_question_date, qna_answer_content, qna_answer_date,
+ qna_type_name, u.user_type_id, u.user_email, u.user_password, u.user_name, u.user_address, u.user_sub_address, u.user_latitude,
+ u.user_longitude, u.user_phone, u.user_register_date, u.user_remove_date, u_type.user_type_name,
+m.user_type_id as manager_type_id, m.user_email as manager_email, m.user_password as manager_password, m.user_name as manager_name,
+m.user_address as manager_address, m.user_sub_address as manager_sub_address, m.user_latitude as manager_latitude,
+m.user_longitude as manager_longitude, m.user_phone as manager_phone, m.user_register_date as manager_register_date,
+m.user_remove_date as manager_remove_date, m_type.user_type_name as manager_type_name
+from qnas as q
+left join qna_types using(qna_type_id) 
+left join users as u on(q.user_id=u.user_id)
+left join user_types as u_type using(user_type_id)
+left join users as m on(q.manager_id=m.user_id)
+left join user_types as m_type on (m.user_type_id=m_type.user_type_id);
+
+* menu_view 만드는 쿼리문
+create view menu_view as
+select * 
+from menus
+left join offer_types using(offer_type_id)
+left join stores using(store_id)
+left join store_categories using(store_category_id)
+left join store_states using(store_state_id)
+left join users using(user_id)
+left join user_types using(user_type_id);
+
+*store_view 만드는 쿼리문
+create view store_view as
+select * from stores
+left join store_categories using(store_category_id)
+left join store_states using(store_state_id)
+left join users using(user_id)
+left join user_types using(user_type_id);
+
+*review_view 만드는 쿼리문
+create view review_view as
+select
+ r.review_id as review_id, r.store_id as store_id, r.user_id as user_id, r.review_content as review_content, r.review_score as review_score, r.review_date as review_date,
+ s.user_id as store_user_id, s.store_category_id as store_category_id, sc.store_category_name as store_category_name,
+ s.store_state_id as store_state_id, ss.store_state_name as store_state_name,
+ s.store_business_number as store_business_number, s.store_name as store_name, s.store_address as store_address,
+ s.store_sub_address as store_sub_address, s.store_latitude as store_latitude, s.store_longitude as store_longitude,
+ s.store_phone as store_phone, s.store_operate_time as store_operate_time, s.store_photo as store_photo,
+ s.store_introduction as store_introduction, s.store_open_state as store_open_state, s.store_paynumber as store_paynumber,
+ su.user_type_id as store_user_type_id, sut.user_type_name as store_user_type_name, su.user_email as store_user_email, su.user_password as store_user_password,
+ su.user_name as store_user_name, su.user_address as store_user_address, su.user_sub_address as store_user_sub_address,
+ su.user_latitude as store_user_latitude, su.user_longitude as store_user_longitude, su.user_phone as store_user_phone,
+ su.user_register_date as store_user_register_date, su.user_remove_date as store_user_remove_date,
+ ru.user_type_id as user_type_id, rut.user_type_name as user_type_name, ru.user_email as user_email, ru.user_password as user_password,
+ ru.user_name as user_name, ru.user_address as user_address, ru.user_sub_address as user_sub_address,
+ ru.user_latitude as user_latitude, ru.user_longitude as user_longitude, ru.user_phone as user_phone,
+ ru.user_register_date as user_register_date, ru.user_remove_date as user_remove_date
+from reviews as r 
+left join stores as s on r.store_id=s.store_id
+left join store_categories as sc on s.store_category_id=sc.store_category_id
+left join store_states as ss on s.store_state_id=ss.store_state_id
+left join users as su on(s.user_id=su.user_id)
+left join user_types as sut on su.user_type_id=sut.user_type_id
+left join users as ru on(r.user_id=ru.user_id)
+left join user_types as rut on (ru.user_type_id=rut.user_type_id);

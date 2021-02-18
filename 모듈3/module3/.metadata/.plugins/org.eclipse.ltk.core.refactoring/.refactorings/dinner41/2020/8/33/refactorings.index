@@ -1,0 +1,58 @@
+1597300586949	Delete element
+1597300592686	Delete element
+1597303062936	Delete element
+1597303231174	Delete element
+1597307905748	Rename package 'kr.co.powerlinux.dinner41.Controller'
+1597307929617	Rename package 'kr.co.powerlinux.dinner41.Service'
+1597313748519	Delete element
+1597313761666	Rename package 'kr.co.dinner41.Controller'
+1597313769295	Rename package 'kr.co.dinner41.Service'
+1597317295299	Delete element
+1597317474691	Delete element
+1597327799500	Move file
+1597327803723	Move file
+1597327807676	Delete element
+1597328333451	Copy files
+1597328337086	Delete elements
+1597328558716	Delete element
+1597328990526	Rename resource 'menuView.html'
+1597329476232	Rename resource 'menuView.jsp'
+1597329601119	Rename resource 'menuView.html'
+1597329688574	Rename resource 'menuView.jsp'
+1597329974328	Rename resource 'menuView.html'
+1597330840521	Rename resource 'storeDetail_menu.html'
+1597331367329	Rename resource 'menuView.jsp'
+1597331415723	Delete element
+1597331635939	Rename resource 'storeDetail_menu.jsp'
+1597331674068	Delete element
+1597331804604	Rename resource 'storeDetail_menu.jsp'
+1597331967070	Delete element
+1597332078162	Rename resource 'storeDetail_menu.html'
+1597332151194	Delete element
+1597334991316	Delete element
+1597335157047	Move file
+1597335169122	Rename resource 'user_storeDetail_menu.js'
+1597368886139	Rename resource 'menuView.html'
+1597369006784	Delete element
+1597369185000	Rename resource 'meneView.js'
+1597369223841	Rename resource 'storeDetail_menu.html'
+1597369263646	Delete element
+1597369691781	Delete element
+1597388812071	Delete element
+1597389453513	Rename package 'com.example.test3.service.cart'
+1597389467411	Delete element
+1597405443970	Delete element
+1597405449979	Delete element
+1597412701288	Rename type 'OrderInsertFailedException'
+1597413136141	Move compilation units
+1597413418852	Copy compilation units
+1597413432737	Rename type 'OrderException'
+1597413440154	Rename type 'OrderInsertException'
+1597413446387	Rename type 'OrderSelectException'
+1597413453300	Rename type 'OrderUpdateException'
+1597421210865	Delete element
+1597421266546	Copy files
+1597421276558	Delete elements
+1597422647759	Rename type 'CartListSerivceImpl'
+1597422849404	Delete element
+1597477355629	Rename type 'UserDeleteSerivceImpl'

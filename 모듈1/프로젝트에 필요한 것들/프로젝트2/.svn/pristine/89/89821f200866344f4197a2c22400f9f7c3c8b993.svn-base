@@ -1,0 +1,44 @@
+
+
+===수정한 부분===
+<WebContent / pages>
+responseSurvey.jsp
+
+<WebContent / script>
+responseSurvey.js
+
+<WebContent/ WEB-INF>
+web.xml
+
+<com.surveypro.report.controller>
+ReportInsertController.java
+ReportCheckController.java
+
+<com.surveypro.report.service>
+ReportInsertService.java
+ReportCheckService.java
+
+<com.surveypro.report.exception>
+ReportInsertException.java
+ReportCheckException.java
+
+<com.surveypro.vo>
+InterestVO.java
+
+<com.surveypro.dao>
+InterestDAO.java
+
+<com.surveypro.interest.controller>
+InterestBackController.java
+InterestInsertController.java
+InterestCheckController.java
+
+<com.surveypro.interest.service>
+IInterestService.java
+InterestInsertService.java
+InterstCheckService.java
+
+<com.surveypro.interest.exception>
+InterestException.java
+InterestInsertException.java
+InterestCheckException.java

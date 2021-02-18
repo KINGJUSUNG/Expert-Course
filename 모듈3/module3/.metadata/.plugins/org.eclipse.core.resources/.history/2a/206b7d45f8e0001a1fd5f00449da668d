@@ -1,0 +1,17 @@
+package kr.co.dinner41.mapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import kr.co.dinner41.vo.Menu2OrderViewVO;
+
+public class Menu2OrderViewMapper implements RowMapper<Menu2OrderViewVO>{
+
+	@Override
+	public Menu2OrderViewVO mapRow(ResultSet rs, int rowNum) throws SQLException {
+		return null;
+	}
+
+}

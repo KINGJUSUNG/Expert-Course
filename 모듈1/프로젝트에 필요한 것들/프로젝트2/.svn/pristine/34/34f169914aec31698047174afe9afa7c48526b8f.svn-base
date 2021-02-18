@@ -1,0 +1,200 @@
+package com.surveypro.dao;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+
+import javax.naming.NamingException;
+
+import com.surveypro.controller.DbManager;
+import com.surveypro.vo.QuestionResultVO;
+import com.surveypro.vo.QuestionVO;
+
+public class QuestionResultDAO {
+	public static final String KEY = "QuestionResultDAO";
+	
+	//설문 객체를 받아오는 함수
+	public QuestionVO getQuestionVO(int s_code,int q_number) {
+		String sql = "SELECT * FROM questions WHERE s_code = "+s_code+" AND q_number="+q_number;
+		Connection con = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		QuestionVO q = null;
+		try {
+			q = new QuestionVO();
+			con = DbManager.getConnection();
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sql);
+			q.setQ_number(q_number);
+			q.setS_code(s_code);
+			if(rs.next()) {
+				q.setQ_title(rs.getString("q_title"));
+				q.setQ_type(rs.getString("q_type"));
+			}
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		catch(NamingException e) {
+			e.printStackTrace();
+		} finally {
+			DbManager.close(stmt);
+			DbManager.close(con);
+		}
+		return q;
+	}
+	
+	
+	
+	//전체 선택지 내용을 받아오는 함수
+	public ArrayList<Integer> getChoiceNum(int s_code, int q_number) {
+		String sql = "SELECT * FROM choices WHERE s_code="+s_code+" AND q_number="+q_number;
+		Connection con = null;
+		Statement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<Integer> list = new ArrayList<>();
+		try {
+			con = DbManager.getConnection();
+			pstmt = con.createStatement();
+			rs = pstmt.executeQuery(sql);
+			while(rs.next()) {
+				Integer num = rs.getInt("choice_num");
+				list.add(num);
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		catch (NamingException e) {
+			e.printStackTrace();
+		} 
+		finally {
+			DbManager.close(pstmt);
+			DbManager.close(con);
+		}
+		return list;
+	}
+	
+	
+	//선택지별 수를 반환하는 함수
+	public Integer getChoiceCount(int s_code, int q_number, int choice_num) {
+		String sql = "SELECT count(*) AS num FROM choiceresults WHERE s_code="+s_code+" AND q_number="+q_number+" AND choice_num ="+choice_num;
+		Connection con =null;
+		Statement stmt =null;
+		ResultSet rs = null;
+		int num = 0;
+		try {
+			con = DbManager.getConnection();
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sql);
+			if(rs.next()) {
+				num = rs.getInt("num");
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		catch (NamingException e) {
+			e.printStackTrace();
+		} 
+		finally {
+			DbManager.close(stmt);
+			DbManager.close(con);
+		}
+		return num ;
+	}
+	public String getChoiceContent(int s_code,int q_number,int choice_num) {
+		String sql = "SELECT * FROM choices WHERE s_code ="+s_code+" AND q_number ="+q_number+" AND choice_num ="+choice_num;
+		Connection con = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		String str = "";
+		try {
+			con = DbManager.getConnection();
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sql); 
+			if(rs.next()) {
+				str = rs.getString("choice_content");
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		catch (NamingException e) {
+			e.printStackTrace();
+		} 
+		finally {
+			DbManager.close(stmt);
+			DbManager.close(con);
+		}
+		return str;
+	}
+	
+	public ArrayList<String> getSubjectiveResultList(int s_code,int q_number){
+		String sql = "SELECT * FROM subjectiveresults WHERE s_code="+s_code+" AND q_number ="+q_number;
+		Statement stmt = null;
+		Connection con = null;
+		ResultSet rs = null;
+		String str ;
+		ArrayList<String> list = null ;
+		try {
+			list = new ArrayList<>();
+			con = DbManager.getConnection();
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sql);
+			if(rs.next()){
+				str = rs.getString("answer");
+				list.add(str);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		catch(NamingException e) {
+			e.printStackTrace();
+		}
+		finally {
+			DbManager.close(stmt);
+			DbManager.close(con);
+		}
+		return list ;
+	}
+	
+	public QuestionResultVO getQuestionResultVO(int s_code,int q_number) {
+		QuestionResultVO qrvo = new QuestionResultVO();
+		HashMap<String,Integer> choices = new HashMap<>(); // 선택지에 해당하는 응답 수 
+		ArrayList<Integer> choList = null; // 선택지 번호 리스트
+		ArrayList<String> subList = null; // 주관식 리스트
+		QuestionVO q = getQuestionVO(s_code,q_number);
+		qrvo.setS_code(s_code);
+		qrvo.setQ_number(q_number);
+		
+		qrvo.setQ_title(q.getQ_title());
+		
+		qrvo.setQ_type(q.getQ_type());
+		
+		//객관식 세팅
+		if(qrvo.getQ_type().equals("C")) {
+			
+			choList = getChoiceNum(s_code,q_number);//객관식 선택지 번호 리스트
+			Iterator<Integer> choit = choList.iterator(); // 이터레이터 생성
+			while(choit.hasNext()) {
+				int choNum = choit.next();
+				int value = getChoiceCount(s_code,q_number,choNum); // 각 문항 번호에 대한 응답수 출력
+				String key = getChoiceContent(s_code,q_number,choNum); // 각 문항 번호에 대한 컨텐츠 출력
+				choices.put(key, value);
+			}
+		}
+		//주관식 세팅
+		else {
+			subList = getSubjectiveResultList(s_code,q_number);
+		}
+		qrvo.setChoices(choices);
+		qrvo.setSubjectives(subList);
+		
+		return qrvo;
+	}
+}

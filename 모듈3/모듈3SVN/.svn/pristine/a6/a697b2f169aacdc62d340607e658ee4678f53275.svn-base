@@ -1,0 +1,70 @@
+링크를 이용한 이동은 무조건 get방식이다
+
+루팅(routing) 라우팅
+라우팅(영어: routing)은 어떤 네트워크 안에서 통신 데이터를 보낼 때 최적의 경로를 선택하는 과정이다.
+
+/board get 게시판 목록보기
+/board/write get 게시글등록폼
+/board/wirte Post 게시글 등록
+/board/{num} get 게시글 보기
+/board/{num} delete 게시글 삭제
+/board/{num}/modify get 게시글 수정폼
+
+/dinner41/login get 로그인화면
+/dinner41/user/register get 회원가입폼
+/dinner41/user/register post 회원가입
+/dinner41/user/search/password get 비밀번호찾기폼
+/dinner41/user/search/password post 비밀번호찾기
+/dinner41/user/general/home get 일반회원메인페이지
+/dinner41/user/general/search/map get 매장위치지도검색폼
+/dinner41/user/mypage/view get 마이페이지보기
+/dinner41/user/mypage/update post 마이페이지수정
+/dinner41/user/mypage/delete get 마이페이지탈퇴
+/dinner41/user/general/review/write get 리뷰쓰기폼
+/dinner41/user/general/review/write post 리뷰쓰기
+/dinner41/user/manager/qna/list get QnA목록보기
+/dinner41/user/manager/qna/view?id=1 get QnA상세보기
+/dinner41/user/manager/qna/view post QnA답변하기
+/dinner41/user/manager/qna/write get QnA폼
+/dinner41/user/manager/qna/write post QnA폼데이터 전송
+/dinner41/user/general/cart get 장바구니보기
+/dinner41/user/general/cart post 장바구니폼전송
+/dinner41/user/general/order get 주문폼
+/dinner41/user/general/order post 주문폼전송
+/dinner41/user/general/order/list get 주문내역목록보기
+/dinner41/user/general/order/view?id=1 get 주문내역상세보기
+/dinner41/user/general/search/store/list get 매장목록보기
+/dinner41/user/general/search/store/view?id=1 get 매장상세보기
+/dinner41/user/general/review/list get 후기목록보기
+/dinner41/user/store/home get 점주회원메인페이지
+/dinner41/user/store/view get 점주매장정보상세보기
+/dinner41/user/store/register get 점주매장등록폼
+/dinner41/user/store/register post 점주매장등록폼전송
+/dinner41/user/store/update get 점주매장정보수정폼
+/dinner41/user/store/update post 점주매장정보수정폼전송
+/dinner41/user/store/menu/list get 점주메뉴목록보기
+/dinner41/user/store/menu/register get 점주메뉴등록폼
+/dinner41/user/store/menu/register post 점주메뉴등록폼전송
+/dinner41/user/store/menu/update get 점주메뉴수정폼
+/dinner41/user/store/menu/update post 점주메뉴수정폼전송
+/dinner41/user/store/menu/view?id=1 get 점주메뉴상세보기
+/dinner41/user/store/order/list get 주문내역목록보기
+/dinner41/user/store/order/view?id=1 get 주문내역상세보기
+/dinner41/user/manager/home get 관리자메인페이지
+/dinner41/user/manager/store/list get 관리자매장목록보기
+/dinner41/user/manager/store/view?id=1 get 관리자매장상세보기
+/dinner41/user/manager/qna/list get 관리자문의목록보기
+/dinner41/user/manager/qna/view?id=1 get 관리자문의상세보기
+/dinner41/user/manager/qna/view?id=1 post 관리자문의상세보기에서 답변달기
+
+
+
+
+
+
+
+
+
+
+
+

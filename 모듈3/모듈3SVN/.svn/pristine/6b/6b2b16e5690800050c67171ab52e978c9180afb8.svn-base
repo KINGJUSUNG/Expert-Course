@@ -1,0 +1,22 @@
+< 내 것을 올릴 때 >
+1. 기본적으로 feature 브랜치에서 작업이 되고 있어야함
+2. git status -> 어떤 파일을 add, commit 할지 확인
+3. add, commit 진행
+4. git push origin feature
+5. pull request 요청
+6. git checkout develop
+7. feature 브랜치 삭제
+8. git pull origin develop
+9. git checkout -b feature
+10. 작업이어서 하면서 1. 로 돌아가기!!
+
+< 다른 사람 것을 내려받을 때 >
+1. 기본적으로 feature 브랜치에서 작업이 되고 있어야함
+2. git stash -> feature 브랜치에서 작업 중인 내역이 stack에 쌓임
+3. git checkout develop
+4. git pull origin develop
+5. git checkout feature
+6. git merge develop(충돌 날 수도 있음, 직접 고치면 됌)
+7. git stash pop
+8. git commit, add
+8. 작업을 이어가면 됌

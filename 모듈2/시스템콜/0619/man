@@ -1,0 +1,18 @@
+< directory >
+opendir();
+readdir();
+closedir();
+lstat();
+chdir();
+getcwd();
+rewinddir();
+
+< signal >
+alarm();
+signal();
+sigemptyset();
+sigaddset();
+sigprocmask();
+sigpending();
+sigismember();
+

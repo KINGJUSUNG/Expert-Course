@@ -1,0 +1,38 @@
+<버전관리>
+문서관리 : SVN 사용
+계정 : svn://powerlinux.co.kr/Dinner41
+계정 : Dinner41
+비밀번호 : dinner41
+
+코드관리 : GIT 사용
+repository 계정 : https://github.com/KINGJUSUNG/module3
+
+<DB 서버>
+계정 : Dinner41
+비밀번호 : dinner41
+호스트주소 : powerlinux.co.kr
+
+<명명규칙>
+테이블명 : 
+모든 문자는 소문자를 사용함.
+테이블명 마지막에는 반드시 s를 붙임.
+두개 이상의 단어가 연결되는 경우 "_"(언더바)를 붙임
+
+컬럼명 : 
+foreign키를 제외한 모든 컬럼명앞에는 "테이블명_"을 붙인다.
+
+클래스명 : 
+필드명 :
+메서드명 :
+selectBy[A] : A를 통해서 하나의 레코드를 뽑아내는 경우
+selectAll : 모든 레코드를 뽑아오는 경우
+
+* 도로명주소 팝업 api
+업체(기관)명 : 1인의 만찬
+URL(IP) : dinner41.co.kr
+승인키 : devU01TX0FVVEgyMDIwMDgxMzIwMDEwMTExMDA2Mzc=
+서비스망 : 인터넷망
+서비스 용도 : 개발 ( 사용기간 : 2020-08-13 ~ 2020-09-12 )
+
+조건문, 메서드 등에서 모두 중괄호로 감싸야함
+

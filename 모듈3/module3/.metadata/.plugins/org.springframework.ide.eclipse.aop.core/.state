@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="jdbctemplate"/>
+<aop-project name="Test3"/>
+<aop-project name="Test4"/>
+<aop-project name="jdbc"/>
+<aop-project name="pay"/>
+<aop-project name="dinner41"/>
+<aop-project name="keyholder">
+<aspect-definition advice-class-name="org.springframework.transaction.interceptor.TransactionInterceptor" advice-method-name="invoke" advice-method-parameter-types="org.aopalliance.intercept.MethodInvocation" advice-type="AROUND" aspect-end-line-number="27" aspect-name="org.springframework.transaction.interceptor.TransactionInterceptor#keyholder#resources/AppContext.xml#27" aspect-start-line-number="27" factory-id="org.springframework.ide.eclipse.aop.core.javaAdvisorDefinitionElementFactory" file="/keyholder/resources/AppContext.xml" pointcut-expression="(@within(org.springframework.transaction.annotation.Transactional) || @annotation(org.springframework.transaction.annotation.Transactional)) &amp;&amp; execution(* *..*(..))" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:keyholder|3:resources/AppContext.xml|7:beans:8|8:partProductInsert:8" bean-file="/keyholder/resources/AppContext.xml" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/keyholder/resources/AppContext.xml" source="=keyholder/C:\/Users\/i\/.m2\/repository\/org\/springframework\/spring-tx\/5.2.8.RELEASE\/spring-tx-5.2.8.RELEASE.jar&lt;org.springframework.transaction.interceptor(TransactionInterceptor.class[TransactionInterceptor~invoke~Lorg.aopalliance.intercept.MethodInvocation;" source-start-line="-1" target="=keyholder/src&lt;keyholder.service{PartProductInsertImpl.java[PartProductInsertImpl~execute~QString;~QString;~I" target-start-line="22"/>
+</aspect-definition>
+</aop-project>
+</aop-reference-model>

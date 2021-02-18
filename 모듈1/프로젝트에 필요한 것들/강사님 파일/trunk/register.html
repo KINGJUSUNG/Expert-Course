@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	* { font-size: 10pt; }
+	.pageHeader { font-size: 15pt; font-weight: bold; text-align: center; }
+	.registerTable { margin: 0px auto; border: 2px solid black; border-radius: 10px; }
+	.registerTable > tbody > tr > td { padding: 5px 0; }
+	.registerTable > tbody > tr > td:first-child { padding-top: 10px; }
+	.registerTable > tbody > tr > td:last-child { padding: 5px 15px 10px 15px; }
+	.registerTable > tbody > tr > td.cellHeader { text-align: center; width: 100px; }
+	.registerTable > tbody > tr > td.cellData { width: 200px; }
+	input[name=id] { width: 150px; }
+	input[name=nick] { width : 150px; }
+	input[type=password] { width: 150px; }
+	table.attention, table.generation { width: 100%; }
+	table.attension td { width: 33%; }
+	table.generation td { width: 25%; }
+	div.action { text-align: center; padding: 10px; }
+	div.action > button { width: 75px; height: 25px; background-color: #006699; color: white; font-weight: bold; border: 1px solid #669999; border-radius: 5px; }
+	div.action > button:hover { background-color: #0099cc; }
+</style>
+</head>
+<body>
+<form action="" method="post">
+	<div class="pageHeader">회원가입양식</div>
+	<table class="registerTable">			
+		<tbody>
+			<tr>
+				<td class="cellHeader">아이디</td>
+				<td class="cellData"><input type="text" name="id"/></td>
+				<td class="cellHeader">별명</td>
+				<td class="cellData"><input type="text" name="nick"/></td>
+			</tr>
+			<tr>
+				<td class="cellHeader">비밀번호</td>
+				<td class="cellData"><input type="password" name="password"/></td>
+				<td class="cellHeader">비밀번호확인</td>
+				<td class="cellData"><input type="password" name="repassword"/></td>
+			</tr>
+			<tr>
+				<td colspan="4">
+				<fieldset>
+					<legend>관심분야</legend>
+					<table class="attention">
+						<tbody>
+							<tr>
+								<td>
+									<label for="travel"><input type="checkbox" id="travel" name="exp" value="travel"/> 여행</label>
+								</td>								
+								<td>
+									<label for="movie"><input type="checkbox" id="movie" name="exp" value="movie"/> 영화</label>
+								</td>
+								<td>
+									<label for="music"><input type="checkbox" id="music" name="exp" value="music"/> 음악</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="game"><input type="checkbox" id="game" name="exp" value="game"/> 게임</label>
+								</td>								
+								<td>
+									<label for="sports"><input type="checkbox" id="sports" name="exp" value="sports"/> 운동</label>
+								</td>
+								<td>
+									<label for="fishing"><input type="checkbox" id="fishing" name="exp" value="fishing"/> 낚시</label>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>연령대</legend>
+					<table class="generation">
+						<tbody>
+							<tr>
+								<td>
+									<label for="g10"><input type="radio" id="g10" name="gen" value="10"/> 10대</label>
+								</td>								
+								<td>
+									<label for="g20"><input type="radio" id="g20" name="gen" value="20"/> 20대</label>
+								</td>
+								<td>
+									<label for="g30"><input type="radio" id="g30" name="gen" value="30"/> 30대</label>
+								</td>
+								<td>
+									<label for="g40"><input type="radio" id="g40" name="gen" value="40"/> 40대</label>
+								</td>
+						</tbody>
+					</table>
+				</fieldset>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="action">
+		<button type="button">가입하기</button>
+		<button type="button">취소하기</button>
+	</div>
+</form>
+</body>
+</html>

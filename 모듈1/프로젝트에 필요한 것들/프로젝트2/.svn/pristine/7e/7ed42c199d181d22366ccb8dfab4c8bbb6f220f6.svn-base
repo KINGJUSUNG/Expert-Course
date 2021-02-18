@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div class="resultTop">
+	<ul>
+		<li>작성자 : 아무개</li>
+		<li>카테고리 : 컴퓨터</li>
+		<li>참여자 수 : 23</li>
+		<li>제목 : 아무개로 살래 잠시
+		<li>
+	</ul>
+</div>
+<div class="resultMid">
+	<ul data-qType="C">
+		<li>문제] 마머머머머머머머머머머머머머</li>
+		<li>머머머머 :
+			<div></div>
+		</li>
+		<li>머머머머 :
+			<div></div>
+		</li>
+		<li>머머머머 :
+			<div></div>
+		</li>
+		<li>머머머머 :
+			<div></div>
+		</li>
+		<li>머머머머 :
+			<div></div>
+		</li>
+	</ul>
+	<ul data-qType="S">
+		<li>문제] 머머머머머머머머</li>
+
+	</ul>
+	<ul data-qType="C">
+		<li>문제] 마머머머머머머머머머머머머머</li>
+		<li>머머머머 :
+			<div></div>
+		</li>
+		<li>머머머머 :
+			<div></div>
+		</li>
+		<li>머머머머 :
+			<div></div>
+		</li>
+		<li>머머머머 :
+			<div></div>
+		</li>
+		<li>머머머머 :
+			<div></div>
+		</li>
+	</ul>
+</div>
+<div class="resutBottom">
+	<button type="button" id="historyBack" onclick="history.back(-1)">돌아가기</button>
+</div>

@@ -1,0 +1,153 @@
+- inner class(중첩클래스)
+클래스 안에 클래스, 인터페이스 등이 들어가있는 것.
+1. 중첩클래스
+2. 정적중첩클래스
+3. 지역중첩클래스 : 메소드 내에서 선언되는 클래스 : 오직 메소드 안에서만 사용가능
+4. 익명중첩클래스 : 이름이 없는 지역중첩클래스 : 그래서 정확한 이름은 '익명지역중첩클래스' 임
+
+- inner class 파일명
+일반적인 inner class : Car$Engine.class
+익명중첩클래스 : Car$1.class, Car$2.class...
+
+- inner class 의 객체 만들기
+Car.Engine e1 = c.new Engine(5000);
+Car.Engine e2 = c.new Engine(4000);
+: 이 때 e1, e2 는 outer class 의 인스턴스를 공유한다.
+그러나 inner class 가 static 일 경우에는 outer class 의 static 멤버만 공용으로 가지고 그 외는 공용으로 가지지 않는다. 
+근데 사실 outer class 의 static 멤버들은 누구에게나 공용이기는 하다.
+
+- inner class 의 제한 사항
+inner class 의 static 멤버는 inner, outer class 외의 밖에서는 접근하지마라(문법적으로는 문제없지만)
+물론 inner class 가 static 이라면 접근가능함.
+
+- 익명중첩클래스의 제한
+외부에서 객체에 접근할 수 없음. outer class 의 final 멤버만 참조할 수 있다.
+
+- 예외(Exception)
+예외는 오류는 오류지만 미연에 방지가 어려운 오류이다.
+예외는 컴파일타임 예외가 있고, 런타임 예외가 있다.
+
+Exception 객체는 '던진다' 는 개념이다.
+예외는 던져지는 것이고 누군가는 받아야한다. 그게 아니면 throws 를 사용하면 된다.
+throw : 던진다 (누군가는 받아야함)
+throws : 전가(떠넘기기)
+
+public static void funcA() {
+	throw new Exception("테스트예외");
+}
+
+public static void main(String[] args) throws Exception {
+	funA();
+	...
+} 
+// 결국 예외를 main() 에게 넘김
+// 결국 JVM 에게 넘김
+// JVM 은 예외가 날아오면 해당 스레드를 죽여버림.
+// 여기서는 메인 스레드를 죽여버림
+// 예외 처리구문이 없으면 결과적으로 항상 JVM 이 관여하게 된다
+
+---------------------------------------------------------------------------------------------------------
+
+class A {}
+class B extends A {}
+public class AppStart {
+	public void a() throws NumberFormatException {
+		b();
+	}
+	public void b() throws NumberFormatException {
+		c();
+	}
+	
+	public void c() throws NumberFormatException {
+		String str = "삼점일사";
+		double d = Double.parseDouble(str);
+		System.out.println(d);
+	}
+	
+	public static void main(String[] args) throws NumberFormatException {
+		AppStart app = new AppStart();
+		app.a();
+	}
+}
+
+// 자신을 부른 곳으로 예외를 전가한다.
+// 결국에는 JVM 이 처리한다.
+// 이건 예외 처리가 아니라 그냥 전가이다. 즉 throws 구문은 예외 처리가 아니라 '예외 전가' 이다.
+// 결국 throw 만으로 예외처리는 불가능
+// 예외 처리라는 건 예외가 발생했을 시 프로그램의 갑작스러운 종료를 막아야하는 것이다.
+// 따라서 try-catch-finally 절 사용
+// throw를 써도는 되는데 결국 JVM 이 관여하는 일은 없도록 해야한다.
+
+try : 예외가 발생하거나 발생할 수도 있는 부분을 감쌈
+catch : 어떤 타입의 예외를 캐치할 것인지, 그리고 캐치했을 때 어떤 예외처리를 할 것인지
+finally : 예외가 발생하건 안하건 무조건 수행할 코드 삽입
+try 절 내에서 선언된 변수는 try 절에서만 사용가능
+
+catch (Exception e) {} // 여기서에 모든 Exception 을 다 캐치할 수 있으므로
+catch (ArithmeticException e) {} // unreachable code 가 됨
+
+따라서 catch 구문에서 반드시 하위 타입먼저 catch 해라
+
+catch (ArithmeticException e) {} 
+catch (Exception e) {}  
+// 이런 식으로
+
+만약에 finally 절에서 예외가 발생하면? finally 절에서 다시 예외 처리를 해주어야 함
+즉 이중 예외 처리
+
+--------------------------------------------------------------------------------------------------------
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class AppStart {
+	
+	public static void func() {
+		FileInputStream fis = null;
+		
+		try {
+			fis = new FileInputStream("data123.txt");
+		}
+		catch (IOException e) {
+			System.out.println("파일오류발생");
+		}
+		finally {
+			try {
+				fis.close();
+			}
+			catch (IOException e) {}
+			catch (NullPointerException e) {}
+		}
+	}
+	
+	public static void main(String[] args) {
+		func();
+	}
+}
+
+--------------------------------------------------------------------------------------------------------------
+
+public class AppStart {
+	
+	public static void func() throws Exception {
+		FileInputStream fis = new FileInputStream("data.txt"); // 여기서 IOException 발생하면 func()를 호출한 곳으로 IOException을 던짐. 근데 이때 throws Exception 이므로 Exception 타입을 업캐스팅되어서 날아감.
+	}
+	
+	public static void read() {
+		try {
+			func();
+		} catch (IOException e) {
+			System.out.println("파일찾기실패");
+		} catch (Exception e) {
+			System.out.println("알수없는오류");
+		}
+	}
+
+	public static void main(String[] args) {
+		read();
+	}
+}
+
+// 실행결과 : 파일찾기실패
+
+

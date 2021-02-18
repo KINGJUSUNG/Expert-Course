@@ -1,0 +1,23 @@
+0000000000000000000000000000000000000000 fd7cfa9b17f152fc1d58edb2efd8985eceec82b0 KIMJUSUNG <dlrtls12345@naver.com> 1597588793 +0900	
+fd7cfa9b17f152fc1d58edb2efd8985eceec82b0 10fdd64088c4a25a96393794915092ea3fe31168 KIMJUSUNG <dlrtls12345@naver.com> 1597600573 +0900	commit: good
+10fdd64088c4a25a96393794915092ea3fe31168 9a34290b47e131ddf38beb66cc8b0ada7e2ad330 KIMJUSUNG <dlrtls12345@naver.com> 1597600594 +0900	commit: good2
+9a34290b47e131ddf38beb66cc8b0ada7e2ad330 048b603c1f0d2839226d5c7c855048f58bf63cda KIMJUSUNG <dlrtls12345@naver.com> 1597601034 +0900	commit (merge): resolve conflict
+048b603c1f0d2839226d5c7c855048f58bf63cda 71c1236dc40b01f8639c4180dcafbd696a23b7f9 KIMJUSUNG <dlrtls12345@naver.com> 1597650926 +0900	pull origin develop: Fast-forward
+71c1236dc40b01f8639c4180dcafbd696a23b7f9 b953a4de73aa090fb116f7af18f92ab6369de67d KIMJUSUNG <dlrtls12345@naver.com> 1597671429 +0900	pull origin develop: Fast-forward
+b953a4de73aa090fb116f7af18f92ab6369de67d 87106941e11d97b2da922d3f58c5100bbb02f9e7 KIMJUSUNG <dlrtls12345@naver.com> 1597682584 +0900	pull origin develop: Fast-forward
+87106941e11d97b2da922d3f58c5100bbb02f9e7 96917c250e19f8c5417935a277731290aac0063f KIMJUSUNG <dlrtls12345@naver.com> 1597682995 +0900	pull origin develop: Fast-forward
+96917c250e19f8c5417935a277731290aac0063f fd12d0921b8c44cc8f863bd3803fdaafd27969f0 KIMJUSUNG <dlrtls12345@naver.com> 1597754036 +0900	pull origin develop: Fast-forward
+fd12d0921b8c44cc8f863bd3803fdaafd27969f0 2beee9de2d1562ba1ea42d85f5c5f25ed9a7ae05 KIMJUSUNG <dlrtls12345@naver.com> 1597768127 +0900	pull origin develop: Fast-forward
+2beee9de2d1562ba1ea42d85f5c5f25ed9a7ae05 e93e3532734c2e7b558f600bbc8a3089ae4261b7 KIMJUSUNG <dlrtls12345@naver.com> 1597768257 +0900	commit: Manifest
+e93e3532734c2e7b558f600bbc8a3089ae4261b7 a6e30594ed9c4de704b12c141ed359f00c276946 KIMJUSUNG <dlrtls12345@naver.com> 1597773885 +0900	commit (merge): merge conflict
+a6e30594ed9c4de704b12c141ed359f00c276946 b040947d661147507a0057ba3365b875d90f6de1 KIMJUSUNG <dlrtls12345@naver.com> 1597773922 +0900	commit: 백업1
+b040947d661147507a0057ba3365b875d90f6de1 289d4d65fb2704cde975ca16f5b280053ad73435 KIMJUSUNG <dlrtls12345@naver.com> 1597777373 +0900	commit: 실수..
+289d4d65fb2704cde975ca16f5b280053ad73435 29fd45814bdaeee99e5b5ab35bd99229ff4bf766 KIMJUSUNG <dlrtls12345@naver.com> 1597777495 +0900	pull origin develop: Merge made by the 'recursive' strategy.
+29fd45814bdaeee99e5b5ab35bd99229ff4bf766 da0f8f4ce310d88687fb5fa6d035d54d0b542b08 KIMJUSUNG <dlrtls12345@naver.com> 1597821721 +0900	commit (merge): resolve conflict
+da0f8f4ce310d88687fb5fa6d035d54d0b542b08 00e762abfab9e3f807c6274a4cb217bc2867d7d6 KIMJUSUNG <dlrtls12345@naver.com> 1597821742 +0900	commit: 주성의 마지막 작업 시작...
+00e762abfab9e3f807c6274a4cb217bc2867d7d6 29a5c57a3807c73f6c134f62493bfa687b6ff9ab KIMJUSUNG <dlrtls12345@naver.com> 1597840861 +0900	pull origin develop: Fast-forward
+29a5c57a3807c73f6c134f62493bfa687b6ff9ab c2bb398250d0cd3a46fcddc05bfa73b9048ce794 KIMJUSUNG <dlrtls12345@naver.com> 1597908104 +0900	pull origin develop: Fast-forward
+c2bb398250d0cd3a46fcddc05bfa73b9048ce794 b12b1b70c92ef19392ecc3a4fadb29d84195a885 KIMJUSUNG <dlrtls12345@naver.com> 1597932216 +0900	pull origin develop: Fast-forward
+b12b1b70c92ef19392ecc3a4fadb29d84195a885 2f6571729ece6d996c75ef80a524a1040b5df259 KIMJUSUNG <dlrtls12345@naver.com> 1597946002 +0900	pull origin develop: Fast-forward
+2f6571729ece6d996c75ef80a524a1040b5df259 6d1be179fa4a6d736abcd68fe0c6423d5325fc3d KIMJUSUNG <dlrtls12345@naver.com> 1597953419 +0900	pull origin develop: Fast-forward
+6d1be179fa4a6d736abcd68fe0c6423d5325fc3d e4af76f71aeb166a5db1073b6554804810168e8b KIMJUSUNG <dlrtls12345@naver.com> 1597999817 +0900	pull origin develop: Fast-forward

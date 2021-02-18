@@ -1,0 +1,19 @@
+<일별>
+SELECT DATE(feeDepositDate) AS `날짜`, sum(feeAmount) '수입금액'
+FROM lectureFee 
+GROUP BY `날짜`;
+
+<주간>
+SELECT 
+DATE_FORMAT(DATE_SUB(feeDepositDate, INTERVAL (DAYOFWEEK(feeDepositDate)-1) DAY), '%Y/%m/%d') as start,
+DATE_FORMAT(DATE_SUB(feeDepositDate, INTERVAL (DAYOFWEEK(feeDepositDate)-7) DAY), '%Y/%m/%d') as end, 
+DATE_FORMAT(feeDepositDate, '%Y%U') AS `date`, sum(feeAmount) 
+FROM lectureFee
+GROUP BY date;
+
+<월별>
+SELECT MONTH(feeDepositDate) AS `월`, sum(feeAmount) AS '수입금액'
+FROM lectureFee 
+GROUP BY `월`;
+
+

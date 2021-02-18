@@ -1,0 +1,15 @@
+SurveyInfoDAO
+SurveyDAO
+SurveyGetByMySurveyService
+surveyList.jsp
+surveyList.js
+mysList.jsp
+mysList.js
+mySurveyList.js
+mysList.css
+myPage.css
+
+SurveyDAO는 dao패키지에 추가
+SurveyGetByMySurveyService는 survey패키지의 service에 추가
+SurveyDAO 는 모든 survey 관련 쿼리문에 s_reported 구문 추가(무조건 다 넣음)
+SurveyInfoDAO는 내 파일에 상우가 추가한 함수만 더하면 됨

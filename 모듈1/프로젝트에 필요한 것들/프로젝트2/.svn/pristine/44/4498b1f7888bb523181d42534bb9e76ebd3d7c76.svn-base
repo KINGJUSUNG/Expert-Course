@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/myPointHistory.css">
+</head>
+<body>
+<div class="phwrap">
+	<div class="pointHistory">
+		<div class="phTop">포인트 사용 내역</div>
+		<div class="phTitle">
+			<ul>
+				<li>대상</li>
+				<li>사유</li>
+				<li>관심수</li>
+				<li>작성일자</li>
+
+			</ul>
+		</div>
+		<div class="phCont">
+			<ul>
+				<li>김주성</li>
+				<li>맥북 하나만 사주세요</li>
+				<li>0</li>
+				<li>2020-05-08</li>
+			</ul>
+			<ul>
+				<li>김주성</li>
+				<li>맥북 하나만 사주세요</li>
+				<li>0</li>
+				<li>2020-05-08</li>
+			</ul>
+		</div>
+		<div class="phBottom">
+			<ul>
+				<li>
+					<button type="button" id="btnFirst">처음</button>
+					<button type="button" id="btnPrev">이전</button>
+					<button type="button" id="btnNext">다음</button>
+					<button type="button" id="btnLast">끝</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
